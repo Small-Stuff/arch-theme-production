@@ -21,4 +21,12 @@
 		$day++;
 	endwhile;
 ?>
+<div id="test_jump"
+
+style="
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	background-color: red;
+"></div>
 </div>

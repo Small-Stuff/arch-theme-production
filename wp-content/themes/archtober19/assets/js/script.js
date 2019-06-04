@@ -163,6 +163,11 @@ Site.pageEnter = function(upcoming_namespace){
 /* CROSS PAGE NAVIGATION */
 Site.calendar = function(){
 	// if we are starting on the homepage
+
+	document.querySelector("#test_jump").onclick = function(event){
+		TweenMax.to(window, {scrollTo: {y: "#october_15", autoKill: false}, delay: 0.25});
+	}
+
 	document.querySelectorAll("a.cal_day").forEach(function(cal_button){
 		cal_button.onclick = function(event){
 			var mainNameSpace = document.querySelector("main").getAttribute("data-barba-namespace");
