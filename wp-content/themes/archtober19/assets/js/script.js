@@ -148,7 +148,7 @@ Site.botd_load = function(pageNameSpace){
 Site.pageLeave = function(){
 	// generic to-do for pages leaving
 	document.querySelector("#arch_menu").classList.remove("open")
-	TweenMax.set(window, {scrollTo: 0})
+	// TweenMax.set(window, {scrollTo: 0})
 }
 
 Site.pageEnter = function(upcoming_namespace){
