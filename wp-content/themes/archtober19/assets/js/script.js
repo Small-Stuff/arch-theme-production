@@ -107,6 +107,7 @@ Site.intro_load = function(current_day, botd_array){
 	TweenMax.to(".botd_filter", 1.5, {opacity: 0.9, delay: 1.5, ease: Power4.easeInOut})
 	TweenMax.to("#open_menu", 1.5, {marginTop: 0, delay: 2, ease: Power4.easeInOut, onComplete: function(){
 			document.querySelector("#open_menu").classList.add("visited")
+			TweenMax.set("#open_menu", {clearProps: "marginTop"})
 		}
 	})
 }
