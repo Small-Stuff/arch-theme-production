@@ -64,7 +64,7 @@
 		);
 		$days_events = new WP_Query($days_events_arguments);
 		?>
-			<article class="archtober_day day_<?= $day_of_week ?>" id="day_<?= $day_int ?>">
+			<article class="archtober_day day_<?= $day_of_week ?>" id="october_<?= $day_int ?>">
 			<h1 class="current_day"><?= $day_of_week ?>, Oct. <?= $day_int ?></h1>
 		<?php
 		if( $days_events->have_posts() ):

@@ -161,7 +161,7 @@ Site.pageEnter = function(upcoming_namespace){
 
 /* CROSS PAGE NAVIGATION */
 Site.calendar = function(){
-	document.querySelectorAll(".cal_day").forEach(function(cal_button){
+	document.querySelectorAll("a.cal_day").forEach(function(cal_button){
 		cal_button.onclick = function(event){
 			var mainNameSpace = document.querySelector("main").getAttribute("data-barba-namespace");
 			console.log("mainNameSpace:", mainNameSpace)
@@ -175,11 +175,11 @@ Site.calendar = function(){
 						document.querySelector("#recent_events").classList.remove("open");
 					}
 				}
+				var target_day_id = "#october_" + cal_button.getAttribute("data-targetday");
+				TweenMax.to(window, (parseInt(cal_button.getAttribute("data-targetday"))/20) + 0.5, {scrollTo: target_day_id, delay: 0.25});
+			}else{ // cross page navigation:
+				Site.target_day = parseInt(cal_button.getAttribute("data-targetday"));
 
-				var target_day_id = "#day_" + cal_button.getAttribute("data-targetday");
-				TweenMax.to(window, (parseInt(cal_button.getAttribute("data-targetday"))/20) + 0.5 , {scrollTo: target_day_id});
-			}else{
-				Site.target_day = parseInt(cal_button.getAttribute("data-targetday"))
 			}
 		}
 	})
@@ -290,20 +290,20 @@ window.onload = function(){
 					if(document.querySelector("#archtober_" + Site.target_day).classList.contains("day_recent")){ // if its a hidden day
 						document.querySelector("#recent_events").classList.add("open")
 					}else{
-						if(document.querySelector("#recent_events") != null){
+						if(document.querySelector("#recent_events") != null){ // if recent events exist but happen to be open
 							document.querySelector("#recent_events").classList.remove("open")
 						}
 					}
 
 					document.querySelector("#open_menu").classList.add("visited")
-					TweenMax.set(window, {scrollTo: "#day_" + Site.target_day})
+					TweenMax.set(window, {scrollTo: "#october_" + Site.target_day})
 					// clear day
 					Site.target_day = 0;
 				}else{
-					Site.pageEnter(data.next.namespace)
+					Site.pageEnter(data.next.namespace);
 				}
-				Site.calendar()
-				Site.homepageToggle()
+				Site.calendar();
+				Site.homepageToggle();
 			}
 		},
 		{
