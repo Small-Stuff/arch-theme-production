@@ -22,46 +22,11 @@
 	- [x] intro statement
 	- [x] single event page
 	- [x] footer info
-	- [ ] dynamic marquee
+	- [x] dynamic marquee
 - [ ] css
 	- [ ] mobile
 
 ## Schedule
-
-
-### June 1 + 2
-- [x] js
-	- [x] subscription js (look at old theme)
-	- [x] intro sequence
-		- [x] homepage onload
-		- [x] homepage visited
-		- [x] subpages
-		- [x] event page
-		- [x] fade
-	- [x] scroll to in closed recent events
-	- [x] filtering js + css
-		- [x] event index
-			- filter should have:
-				- [x] "type"
-				- "partner"
-		- [x] exhibition index: filter should by institution (i.e. location?)?
-- [x] svg event icons logic
-- [x] barba universal ui loading
-- [x] click past events toggle
-- [x] SERVER
-	- [x] subdomain set up
-		- [x] setup preview... theme
-		- [x] setup preview account
-		- [x] switch over archtober.org to preview once ssl
-	- [ ] set up git hook + push to staging for 2019
-- css
-	- [x] marquee logic
-	- [x] calendar css tune-up
-	- [x] homepage block link refinement
-	- [x] mobile styles refinement
-		- [x] block font size
-- [x] silhouette logic
-- [x] is a loading icon? nope
 
 ### other to-dos
 - [ ] exhibition page design refinement
@@ -70,6 +35,15 @@
 - [ ] pressure test things will more content
 	- pressure test recent events section
 - [ ] live content population testing
+
+### June 4
+- [ ] mobile navigation testing
+	- seems to be a calendar nav bug?
+- [ ] adjust size of type hierarchy for
+	- [ ] mobile block image
+	- [ ] mobile block type
+	- [ ] exhibition page
+- [ ] introduce brown color
 
 ### waiting for 
 - [ ] icons

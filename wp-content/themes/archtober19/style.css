@@ -151,6 +151,7 @@ h5{ text-transform: uppercase; }
 		padding-bottom: 4rem;
 		pointer-events: initial;
 		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 }
 
@@ -271,6 +272,7 @@ h5{ text-transform: uppercase; }
 #subscribe input.text_field{
 	display: block;
 	border-style: none;
+	border-radius: 0;
 	background-color: transparent;
 	border-bottom: solid 2px black;
 	font-size: 1rem;

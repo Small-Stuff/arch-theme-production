@@ -166,17 +166,18 @@ Site.calendar = function(){
 			var mainNameSpace = document.querySelector("main").getAttribute("data-barba-namespace");
 			console.log("mainNameSpace:", mainNameSpace)
 			if(mainNameSpace == "home"){
-				event.preventDefault()
+				event.preventDefault();
 				document.querySelector("#arch_menu").classList.remove("open") // exit menu
 				if(cal_button.classList.contains("day_recent")){ // if its a hidden day
-					document.querySelector("#recent_events").classList.add("open")
+					document.querySelector("#recent_events").classList.add("open");
 				}else{
 					if(document.querySelector("#recent_events") != null){
-						document.querySelector("#recent_events").classList.remove("open")
+						document.querySelector("#recent_events").classList.remove("open");
 					}
 				}
 
-				TweenMax.to(window, parseInt(cal_button.getAttribute("data-targetday"))/20, {scrollTo: "#day_" + cal_button.getAttribute("data-targetday")})
+				var target_day_id = "#day_" + cal_button.getAttribute("data-targetday");
+				TweenMax.to(window, (parseInt(cal_button.getAttribute("data-targetday"))/20) + 0.5 , {scrollTo: target_day_id});
 			}else{
 				Site.target_day = parseInt(cal_button.getAttribute("data-targetday"))
 			}
