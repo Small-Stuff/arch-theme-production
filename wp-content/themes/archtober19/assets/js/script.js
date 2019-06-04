@@ -176,7 +176,10 @@ Site.calendar = function(){
 					}
 				}
 				var target_day_id = "#october_" + cal_button.getAttribute("data-targetday");
-				TweenMax.to(window, (parseInt(cal_button.getAttribute("data-targetday"))/20) + 0.5, {scrollTo: {y: target_day_id, autoKill: false}, delay: 0.25});
+				// TweenMax.to(window, (parseInt(cal_button.getAttribute("data-targetday"))/20) + 0.5, {scrollTo: {y: target_day_id, autoKill: false}, delay: 0.25});
+				TweenMax.set(window, {scrollTo: {y: target_day_id, autoKill: false}, delay: 0.25, onComplete: function(){
+					setTimeout(function(){alert(target_day_id);}, 1000)
+				}});
 			}else{ // cross page navigation:
 				Site.target_day = parseInt(cal_button.getAttribute("data-targetday"));
 
