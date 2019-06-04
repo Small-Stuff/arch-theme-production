@@ -175,7 +175,7 @@ Site.calendar = function(){
 
 			var scrollDistance = $("#october_15").offset().top
 			console.log(scrollDistance)
-			$(window).animate({
+			$("html, body").animate({
 				scrollTop: scrollDistance
 			}, 1000)
 			
