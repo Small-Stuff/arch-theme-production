@@ -176,7 +176,7 @@ Site.calendar = function(){
 					}
 				}
 				var target_day_id = "#october_" + cal_button.getAttribute("data-targetday");
-				TweenMax.to(window, (parseInt(cal_button.getAttribute("data-targetday"))/20) + 0.5, {scrollTo: target_day_id, delay: 0.25});
+				TweenMax.to(window, (parseInt(cal_button.getAttribute("data-targetday"))/20) + 0.5, {scrollTo: {y: target_day_id, autoKill: false}, delay: 0.25});
 			}else{ // cross page navigation:
 				Site.target_day = parseInt(cal_button.getAttribute("data-targetday"));
 
@@ -296,7 +296,7 @@ window.onload = function(){
 					}
 
 					document.querySelector("#open_menu").classList.add("visited")
-					TweenMax.set(window, {scrollTo: "#october_" + Site.target_day})
+					TweenMax.set(window, {scrollTo: {y: "#october_" + Site.target_day, autoKill: false}})
 					// clear day
 					Site.target_day = 0;
 				}else{
