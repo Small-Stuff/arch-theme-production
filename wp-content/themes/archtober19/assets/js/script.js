@@ -167,7 +167,19 @@ Site.calendar = function(){
 	document.querySelectorAll(".test_jump").forEach(function(test_jumper){
 		test_jumper.onclick = function(event){
 			console.log("test")
-			TweenMax.to(window, 1, {scrollTo: {y: "#october_15", autoKill: false}, delay: 0.25});
+			if(window.outerWidth < 768){
+
+			}else{
+				// TweenMax.to(window, 1, {scrollTo: {y: "#october_15", autoKill: false}, delay: 0.25});
+			}
+
+			var scrollDistance = $("#october_15").offset().top
+			console.log(scrollDistance)
+			$("html, body").animate({
+				scrollTop: scrollDistance
+			}, 1000)
+			
+
 		}
 	})
 
