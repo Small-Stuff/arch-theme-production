@@ -25,7 +25,12 @@ Template Name: Single Event
 		<h1 class="event_page_title event_page_<?= get_terms_str_slug($id, 'event_type'); ?>"><?= $title ?></h1>
 		<h4 class="event_info"><?= (get_field('event_endtime')) ? get_field('event_time')." – ".get_field('event_endtime') : get_field('event_time') ?></h4>
 		<h4 class="event_info"><?= (get_field('location_url')) ? '<a target="_blank" href="'.get_field('location_url').'">'.get_field('location').'</a>' : get_field('location'); ?></h4>
-		<section class="event_content"><?= $content ?></section>
+		<?php if(get_field('featured_image')): ?>
+			<img class="event_featured_image" src="<?= get_field('featured_image') ?>">
+		<?php endif ?>
+		<?php if($this_post->post_content != ''): ?>
+			<section class="event_content"><?= $content ?></section>
+		<?php endif ?>
 	</article
 	><aside class="page_section">
 		<?php get_template_part('components/gallery'); ?>

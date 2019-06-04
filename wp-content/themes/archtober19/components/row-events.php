@@ -11,11 +11,25 @@
 	# 2019-06-02
 
 ?><a class="index_section day_<?= $day_of_week ?> <?= ($event_str < $today_str && $today_str < '2019-11-01') ? 'day_recent' : '' ?>" href="<?= get_permalink(); ?>" data-eventtype='<?= get_terms_array_slug($id, 'event_type') ?>'>
-	<h3 class="index_section_title section_six event_date"><?= $day_of_week ?>, Oct. <?= $day_of_month ?></h3>
-	<h3 class="index_section_title section_six event_title"><?= get_the_title(); ?></h3>
-	<h3 class="index_section_title section_six"><span class="event_type" data-event_type="<?= get_terms_str_slug($id, 'event_type'); ?>"><?= get_terms_str($id, 'event_type'); ?></span></h3>
-	<h3 class="index_section_title section_six"><?= get_field('location'); ?></h3>
-	<h3 class="index_section_title section_six"><?= (get_field('event_endtime')) ? get_field('event_time')." – ".get_field('event_endtime') : get_field('event_time') ?></h3>
-	<h3 class="index_section_title section_six"><?= get_field('partner'); ?></h3>
+		<h3 class="index_section_title section_six event_date">
+			<?= $day_of_week ?>, Oct. <?= $day_of_month ?>
+		</h3>
+		<h3 class="index_section_title section_six event_title">
+			<?= get_the_title(); ?>
+		</h3>
+		<h3 class="index_section_title section_six index_mobile_small">
+			<span class="event_type index_mobile_small" data-event_type="<?= get_terms_str_slug($id, 'event_type'); ?>"><?= get_terms_str($id, 'event_type'); ?></span>
+		</h3>
+		<h3 class="index_section_title section_six index_mobile_small">
+			<?= get_field('location'); ?>
+		</h3>
+		<h3 class="index_section_title section_six index_mobile_small">
+			<?= (get_field('event_endtime')) ? get_field('event_time')." – ".get_field('event_endtime') : get_field('event_time') ?>
+		</h3>
+		<h3 class="index_section_title section_six mobile_hide">
+			<?php foreach (get_field('partner') as $partner): ?>
+				<?= $partner->post_title.'<br>' ?>
+			<?php endforeach; ?>
+		</h3>
 	<?php get_template_part('components/extra', 'icons') ?>
 </a>

@@ -37,13 +37,15 @@
 - [ ] live content population testing
 
 ### June 4
-- [ ] mobile navigation testing
-	- seems to be a calendar nav bug?
-- [ ] adjust size of type hierarchy for
-	- [ ] mobile block image
-	- [ ] mobile block type
-	- [ ] exhibition page
-- [ ] introduce brown color
+- [x] mobile navigation testing
+- [x] adjust size of type hierarchy for
+	- [x] mobile block image
+	- [x] mobile block type
+	- [x] exhibition page
+- [x] introduce brown color
+- export site as discrete files
+
+
 
 ### waiting for 
 - [ ] icons
