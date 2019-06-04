@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "babel assets/js/barba.umd.js  !assets/js/script.js -D assets/build/"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
