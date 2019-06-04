@@ -165,25 +165,6 @@ Site.pageEnter = function(upcoming_namespace){
 Site.calendar = function(){
 	// if we are starting on the homepage
 
-	document.querySelectorAll(".test_jump").forEach(function(test_jumper){
-		test_jumper.onclick = function(event){
-			console.log("test")
-			if(window.outerWidth < 768){
-
-			}else{
-				// TweenMax.to(window, 1, {scrollTo: {y: "#october_15", autoKill: false}, delay: 0.25});
-			}
-
-			var scrollDistance = $("#october_15").offset().top
-			console.log(scrollDistance)
-			$("html, body").animate({
-				scrollTop: scrollDistance
-			}, 1000)
-			
-
-		}
-	})
-
 	document.querySelectorAll("a.cal_day").forEach(function(cal_button){
 		cal_button.onclick = function(event){
 			var mainNameSpace = document.querySelector("main").getAttribute("data-barba-namespace");
