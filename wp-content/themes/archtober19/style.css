@@ -666,8 +666,10 @@ ul.archtober_menu_index li a{
 	}	
 }
 
-.archtober_day{
-	padding-top: calc(1.1rem + 1vh);
+.archtober_day{ padding-top: calc(1.1rem + 1vh); }
+
+@media(max-width: 768px){
+	.archtober_day{ padding-top: calc(2.1rem); }
 }
 
 .current_day{
