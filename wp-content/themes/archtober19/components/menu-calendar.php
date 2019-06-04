@@ -21,3 +21,4 @@
 		$day++;
 	endwhile;
 ?>
+</div>
