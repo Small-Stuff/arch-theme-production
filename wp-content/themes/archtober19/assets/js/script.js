@@ -148,6 +148,7 @@ Site.botd_load = function(pageNameSpace){
 Site.pageLeave = function(){
 	// generic to-do for pages leaving
 	document.querySelector("#arch_menu").classList.remove("open")
+	TweenMax.set(window, {scrollTo: 0})
 }
 
 Site.pageEnter = function(upcoming_namespace){
@@ -161,6 +162,7 @@ Site.pageEnter = function(upcoming_namespace){
 
 /* CROSS PAGE NAVIGATION */
 Site.calendar = function(){
+	// if we are starting on the homepage
 	document.querySelectorAll("a.cal_day").forEach(function(cal_button){
 		cal_button.onclick = function(event){
 			var mainNameSpace = document.querySelector("main").getAttribute("data-barba-namespace");
@@ -257,10 +259,11 @@ window.onload = function(){
 	console.log("Archtober 2019  👀\nSmall Stuff & Lukas Eigler-Harding")
 	// load ui
 	Site.starting_namespace = document.querySelector("main").getAttribute("data-barba-namespace");
-	Site.menuInteraction()
-	Site.emailSubmission()
-	Site.calendar()
-	Site.crosspage_event_filter()
+	Site.menuInteraction();
+	Site.emailSubmission();
+	Site.calendar();
+	// possibly create open cal and menu cal functions?
+	Site.crosspage_event_filter();
 	Site.botd_load(Site.starting_namespace)
 	Site.visited = true;
 
@@ -293,15 +296,16 @@ window.onload = function(){
 					if(document.querySelector("#archtober_" + Site.target_day).classList.contains("day_recent")){ // if its a hidden day
 						document.querySelector("#recent_events").classList.add("open")
 					}else{
-						if(document.querySelector("#recent_events") != null){ // if recent events exist but happen to be open
-							document.querySelector("#recent_events").classList.remove("open")
-						}
+						// if(document.querySelector("#recent_events") != null){ // if recent events exist but happen to be open
+						// 	document.querySelector("#recent_events").classList.remove("open")
+						// }
 					}
 
 					document.querySelector("#open_menu").classList.add("visited")
-					TweenMax.set(window, {scrollTo: {y: "#october_" + Site.target_day, autoKill: false}})
-					// clear day
-					Site.target_day = 0;
+					TweenMax.set(window, {scrollTo: {y: "#october_" + Site.target_day, autoKill: false}, delay:0.25, onComplete: function(){
+							Site.target_day = 0; // clear day
+						}
+					})
 				}else{
 					Site.pageEnter(data.next.namespace);
 				}
