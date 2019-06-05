@@ -1,6 +1,6 @@
 /*
 Theme Name: Archtober 2019
-Theme URI: https://github.com/Small-Stuff/arch-theme
+Theme URI: https://github.com/Small-Stuff/arch-theme-production
 Author: lukas eigler harding
 Author URI: http://lukaslukas.com/
 Description: The 2019 for CFA Archtober
@@ -1256,12 +1256,12 @@ span.event_type{
 	margin-bottom: 0;
 }
 
-.event_featured_image{
+.page_section img.event_featured_image{
 	display: none;
 }
 
 @media(max-width: 768px){
-	.event_featured_image{
+	.page_section img.event_featured_image{
 		display: block;
 		width: 100%;
 	}
