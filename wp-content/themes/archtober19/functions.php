@@ -284,8 +284,21 @@ function get_terms_icons( $post_id, $taxonomy ) {
 	$arr = array();
 	foreach( $terms as $obj ){
 		$the_icon = get_field('event_type_icon', $obj->taxonomy . '_' . $obj->term_id);
+		$icon_horizontal = get_field('event_type_horizontal', $obj->taxonomy . '_' . $obj->term_id);
+		$icon_vertical = get_field('event_type_vertical', $obj->taxonomy . '_' . $obj->term_id);
+		$icon_rotation = get_field('event_type_rotation', $obj->taxonomy . '_' . $obj->term_id);
+		$icon_scale = get_field('event_type_scale', $obj->taxonomy . '_' . $obj->term_id);
+		
+		$icon_attributes = [
+			'the_icon' => $the_icon, 
+			'icon_x' => $icon_horizontal, 
+			'icon_y' => $icon_vertical, 
+			'icon_rotation' => $icon_rotation, 
+			'icon_scale' => $icon_scale
+		];
+
 		#echo $the_icon;
-		array_push( $arr, $the_icon );
+		array_push( $arr, $icon_attributes );
 	}
 	return $arr;
 } # return string of icon urls associated w post
