@@ -748,15 +748,15 @@ ul.archtober_menu_index li a{
 	height: 100%;
 }
 
-.block_link.Single-story,
+.Single-story .block_link,
 .arch_event_block.Single-story { min-height: 6rem; }
-.block_link.Two-story,
+.Two-story .block_link,
 .arch_event_block.Two-story { min-height: 7rem; }
-.block_link.Three-story,
+.Three-story .block_link,
 .arch_event_block.Three-story { min-height: 8rem; }
-.block_link.Four-story,
+.Four-story .block_link,
 .arch_event_block.Four-story { min-height: 10rem; }
-.block_link.Sky-scraper,
+.Sky-scraper .block_link,
 .arch_event_block.Sky-scraper { min-height: 12rem; }
 
 .arch_event_block .event_type, 
