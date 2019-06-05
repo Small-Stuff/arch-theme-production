@@ -1355,7 +1355,7 @@ span.event_type{
 }
 
 
-.page_section h4{
+.page_section h4, .page_section h4 a{
 	font-size: 0.6rem;
 	line-height: 0.8rem;
 	font-weight: normal;
