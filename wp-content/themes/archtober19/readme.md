@@ -23,27 +23,22 @@
 	- [x] single event page
 	- [x] footer info
 	- [x] dynamic marquee
-- [ ] css
-	- [ ] mobile
+- [x] css
+	- [x] mobile
 
 ## Schedule
 
 ### other to-dos
-- [ ] exhibition page design refinement
+- [x] exhibition page design refinement
 - [ ] meta tags toggle + info
 - [ ] js compile/polyfills... probs babel, but wanna run test... 
 - [ ] pressure test things will more content
 	- pressure test recent events section
-- [ ] live content population testing
-
-### June 4
-- [x] mobile navigation testing
-- [x] adjust size of type hierarchy for
-	- [x] mobile block image
-	- [x] mobile block type
-	- [x] exhibition page
-- [x] introduce brown color
+- [x] event type filter link on event pages
+- [x] alt heights for event types
+- [x] live content population testing
 - export site as discrete files
+
 
 
 

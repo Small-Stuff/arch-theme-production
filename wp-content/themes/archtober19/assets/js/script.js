@@ -115,7 +115,7 @@ Site.intro_load = function(current_day, botd_array){
 Site.botd_load = function(pageNameSpace){
 	var botd_array = Array.prototype.slice.call(document.querySelectorAll(".botd_image"));
 	var current_day = (document.querySelector(".day_current") != null) ? parseInt(document.querySelector(".day_current").getAttribute("data-current_day")) : 31;
-	console.log("botd_load", pageNameSpace, current_day, botd_array)
+	// console.log("botd_load", pageNameSpace, current_day, botd_array)
 
 	if(pageNameSpace == "home"){
 		if(Site.visited == false){
@@ -229,7 +229,7 @@ Site.ui_update = function(filter_array){
 
 		// filter listed events
 		document.querySelectorAll(".index_section").forEach(function(this_section){
-			console.log(this_section)
+			// console.log(this_section)
 			var this_event_type_list = JSON.parse(this_section.getAttribute("data-eventtype"));
 			var active_status = false;
 			this_event_type_list.forEach(function(this_event_type, index){
@@ -299,11 +299,11 @@ window.onload = function(){
 				]
 			},
 			beforeLeave(){
-				console.log("target_day, leaving")
+				// console.log("target_day, leaving")
 				Site.pageLeave()
 			},
 			afterEnter(data){
-				console.log("homepage entered!")
+				// console.log("homepage entered!")
 				if(Site.target_day > 0 && Site.target_day < 32){
 					if(document.querySelector("#archtober_" + Site.target_day).classList.contains("day_recent")){ // if its a hidden day
 						document.querySelector("#recent_events").classList.add("open")
@@ -365,7 +365,7 @@ window.onload = function(){
 			name: 'basic_transition',
 			sync: true,
 			beforeLeave(data){
-				console.log("basic_transition, leaving", data.current.namespace, data.next.namespace)
+				// console.log("basic_transition, leaving", data.current.namespace, data.next.namespace)
 				Site.pageLeave()
 			},
 			afterEnter(data){

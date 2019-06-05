@@ -92,6 +92,10 @@ h5, h6{
 }
 
 h5{ text-transform: uppercase; }
+h5 a{
+	text-decoration: none;
+	font-weight: normal;
+}
 
 @media(max-width: 768px){
 	h2, h2 a, h3, h3 a, h3 span, p, p a{
@@ -621,6 +625,7 @@ ul.archtober_menu_index li a{
 	.archtober_event_section{
 		padding-left: 0;
 		padding-right: 0;
+		padding-top: 0;
 	}
 }
 
@@ -691,7 +696,7 @@ ul.archtober_menu_index li a{
 .archtober_day{ padding-top: calc(1.1rem + 1vh); }
 
 @media(max-width: 768px){
-	.archtober_day{ padding-top: calc(2.1rem); }
+	.archtober_day{ /*padding-top: calc(2.1rem);*/ }
 }
 
 .current_day{
@@ -711,6 +716,7 @@ ul.archtober_menu_index li a{
 		box-sizing: border-box;
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
+		padding-top: 0.25rem;
 		background-color: #D9CCCC;
 	}	
 }
@@ -741,6 +747,12 @@ ul.archtober_menu_index li a{
 	min-height: 10rem;
 	height: 100%;
 }
+
+.block_link.Single-story{ min-height: 8rem; }
+.block_link.Two-story{ min-height: 10rem; }
+.block_link.Three-story{ min-height: 12rem; }
+.block_link.Four-story{ min-height: 14rem; }
+.block_link.Sky-scraper{ min-height: 16rem; }
 
 .arch_event_block .event_type, 
 .arch_event_block h2,
@@ -851,6 +863,7 @@ ul.archtober_menu_index li a{
 
 a.event_link{
 	text-decoration: none;
+	z-index: 1;
 }
 
 .event_link{
@@ -1093,6 +1106,8 @@ li.arch_filter{
 
 }
 
+
+
 span.event_type{
 	padding-left: 0.15rem;
 	padding-right: 0.15rem;
@@ -1203,11 +1218,14 @@ span.event_type{
 	}
 }
 
-
 .event_page_title{
 	display: inline-block;
 	padding-left: 0.05rem;
 	padding-right: 0.15rem;
+}
+
+@media(max-width: 768px){
+	.event_page_title{ display: inline; }
 }
 
 .page_section h1.event_page_title{
@@ -1238,6 +1256,9 @@ span.event_type{
 }
 
 @media(max-width: 768px){
+	.page_section img{
+		width: 100%;
+	}
 	.page_section p, .page_section ul li, .page_section ol li{
 		font-size: 0.8rem;
 		line-height: 1.2rem;
@@ -1304,8 +1325,21 @@ span.event_type{
 	color: rgba(66, 40, 42, 1);
 }
 
+.event_content h2 a,
+.event_content h3 a,
+.event_content h4 a,
+.event_content h5 a,
+.event_content h6 a,
+.event_content p a,
+.event_content ul li a,
+.event_content ol li a{
+	color: black;
+	border-bottom: solid 2px black;
+}
+
 .page_section .event_content h1{
 	margin-top: 1rem;
+	text-transform: uppercase;
 	margin-bottom: 0.75rem;
 }
 
@@ -1313,10 +1347,10 @@ span.event_type{
 	font-size: 1rem;
 	line-height: 1.2rem;
 }
-.page_section h3{ font-weight: normal; }
+.page_section h3{ font-weight: bold; font-style: italic; }
 
 .page_section .event_content h2, .page_section .event_content h3{
-	margin-top: 0.75rem;
+	margin-top: 1.5rem;
 	margin-bottom: 0.5rem;
 }
 
@@ -1333,7 +1367,9 @@ span.event_type{
 }
 
 .page_section .event_content h4{
-	margin-top: 0.5rem;
+	margin-top: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
 	margin-bottom: 0.25rem;
 }
 
@@ -1341,6 +1377,7 @@ span.event_type{
 	font-size: 0.6rem;
 	line-height: 1rem;
 	font-weight: bold;
+	font-style: italic;
 	text-transform: none;
 }
 
@@ -1354,6 +1391,9 @@ span.event_type{
 .page_section .event_content h5, .page_section h6{
 	margin-top: 0.5rem;
 	margin-bottom: 0.25rem;
+}
+.page_section .event_content h5, .page_section .event_content h6{
+	margin-top: 1.5rem;
 }
 
 .page_section ul{

@@ -290,5 +290,16 @@ function get_terms_icons( $post_id, $taxonomy ) {
 	return $arr;
 } # return string of icon urls associated w post
 
+function get_terms_height( $post_id, $taxonomy ) {
+	$terms = wp_get_post_terms( $post_id, $taxonomy );
+	$arr = array();
+	foreach( $terms as $obj ){
+		$the_height = get_field('event_type_height', $obj->taxonomy . '_' . $obj->term_id);
+		array_push( $arr, $the_height.' ' );
+	}
+	$str = implode( ',', $arr );
+	return $str;
+} # return string of icon urls associated w post
+
 add_image_size( 'custom', 800, 533, true );
 add_filter( 'show_admin_bar', '__return_false' ); # when logged in
