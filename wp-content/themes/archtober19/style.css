@@ -1219,7 +1219,7 @@ span.event_type{
 }
 
 .event_page_title{
-	display: inline-block;
+	display: block;
 	padding-left: 0.05rem;
 	padding-right: 0.15rem;
 }
