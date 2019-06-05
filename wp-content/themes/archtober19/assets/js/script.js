@@ -149,12 +149,22 @@ Site.botd_load = function(pageNameSpace){
 Site.pageLeave = function(){
 	// generic to-do for pages leaving
 	document.querySelector("#arch_menu").classList.remove("open")
+	TweenMax.set('body', {opacity :0})
 	// TweenMax.set(window, {scrollTo: 0})
 }
 
 Site.pageEnter = function(upcoming_namespace){
 	// generic to-do for pages leaving
-	TweenMax.set(window, {scrollTo: 0})
+	var animation = new TimelineLite()
+			animation.set(window, {scrollTo: 0})
+	             .to("body", 1, {opacity :1})
+	             .set("body", {clearProps: "opacity"});
+
+
+	// TweenMax.set("body", {opacity :0})
+	// TweenMax.set(window, {scrollTo: 0})
+	// TweenMax.to("body", 0.25, {opacity :1, onComplete: function(){
+	// TweenMax.set("body", {clearProps: "all"})}})
 	Site.botd_load(upcoming_namespace)
 	Site.menuInteraction()
 	Site.crosspage_event_filter()
@@ -304,8 +314,12 @@ window.onload = function(){
 					}
 
 					document.querySelector("#open_menu").classList.add("visited")
+					
 					TweenMax.set(window, {scrollTo: {y: "#october_" + Site.target_day, autoKill: false}, delay:0.25, onComplete: function(){
 							Site.target_day = 0; // clear day
+							TweenMax.to("body", 1, {opacity :1, onComplete: function(){
+								TweenMax.set("body", {clearProps: "all"})
+							}})
 						}
 					})
 				}else{

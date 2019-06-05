@@ -5,6 +5,11 @@
 	<title><?php bloginfo( 'name' ); ?></title>
 	<?php wp_head(); ?>
 
+	<link rel="icon" type="image/png" href="<?= get_template_directory_uri() ?>/assets/favicon/archtober-favicon-16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="<?= get_template_directory_uri() ?>/assets/favicon/archtober-favicon-32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="<?= get_template_directory_uri() ?>/assets/favicon/archtober-favicon-196.png" sizes="196x196">
+	<link rel="icon" type="image/png" href="<?= get_template_directory_uri() ?>/assets/favicon/archtober-favicon.png" sizes="746x746">
+
 	<noscript>
 		<style type="text/css">
 			.archtober_logo.botd_hidden{
