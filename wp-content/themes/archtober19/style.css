@@ -749,13 +749,13 @@ ul.archtober_menu_index li a{
 }
 
 .Single-story .block_link,
-.arch_event_block.Single-story { min-height: 6rem; }
+.arch_event_block.Single-story { min-height: 7rem; }
 .Two-story .block_link,
-.arch_event_block.Two-story { min-height: 7rem; }
+.arch_event_block.Two-story { min-height: 8rem; }
 .Three-story .block_link,
-.arch_event_block.Three-story { min-height: 8rem; }
+.arch_event_block.Three-story { min-height: 10rem; }
 .Four-story .block_link,
-.arch_event_block.Four-story { min-height: 10rem; }
+.arch_event_block.Four-story { min-height: 11rem; }
 .Sky-scraper .block_link,
 .arch_event_block.Sky-scraper { min-height: 12rem; }
 
@@ -802,6 +802,7 @@ ul.archtober_menu_index li a{
 	top: -1rem;
 	right: -1rem;
 	width: 10vw;
+	z-index: 10;
 	transform: rotate(20deg);
 	object-fit: contain;
 }
