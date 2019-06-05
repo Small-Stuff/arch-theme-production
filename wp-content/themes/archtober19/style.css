@@ -1085,7 +1085,7 @@ li.arch_filter{
 	position: absolute;
 	top: -0.5rem;
 	right: 50vw;
-	width: 10vw;
+	width: 6vw;
 	transform: rotate(20deg);
 	object-fit: contain;
 }

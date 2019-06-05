@@ -8,6 +8,6 @@ if($icons): ?>
 				style="transform: 
 								scale(<?= intval($icon_url[icon_scale])/100 ?>) 
 								rotate(<?= $icon_url[icon_rotation].'deg' ?>)
-								translate(<?= $icon_url[icon_x].'rem, '.$icon_url[icon_y].'rem' ?>);">
+								translate(<?= $icon_url[icon_x].'vw, '.$icon_url[icon_y].'vw' ?>);">
 	<?php endforeach; ?>
 <?php endif; ?>
