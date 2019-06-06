@@ -52,7 +52,8 @@ Site.emailSubmission = function(){
         console.log("success", data, textStatus, jqXHR);
         form.addClass(data.status);
         if (data.result) {
-          return message.html(data.result);
+          console.log(data.result)
+          return message.html("Thank you for Subscribing!");
         }
       }
     });

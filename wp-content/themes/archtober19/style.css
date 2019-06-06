@@ -1067,9 +1067,7 @@ li.arch_filter{
 		padding-right: 0.05rem;
 	}
 
-	.index_section:nth-of-type(odd){
-		border-right: solid 2px black;
-	}
+	
 }
 
 
@@ -1092,6 +1090,7 @@ li.arch_filter{
 
 @media(max-width: 768px){
 	.index_section img.archtober_event_icon{
+		top: 0;
 		right: 0rem;
 		width: 20vw;
 	}

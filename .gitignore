@@ -109,6 +109,7 @@ wp-content/mysql.sql
 # archtober 2019 theme specific to ignore
 
 /wp-content/themes/archtober-18/*
+/wp-content/themes/preview/*
 /wp-content/themes/twentynineteen/*
 /wp-content/themes/archtober19/node_modules/*
 /wp-content/plugins/*
