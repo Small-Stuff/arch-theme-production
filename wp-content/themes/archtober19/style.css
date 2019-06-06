@@ -1467,8 +1467,18 @@ footer{
 .footer_column h2{
 	font-size: 1rem;
 	line-height: 1.2rem;
+	margin-bottom: 0.5rem;
 }
 
+
+.footer_column h3,
+.footer_column h4,
+.footer_column h5,
+.footer_column h6,
+.footer_column p,
+.footer_column ul li{
+	margin-bottom: 0.25rem;
+}
 
 
 .footer_column h1 a,
@@ -1482,5 +1492,6 @@ footer{
 	text-decoration: none;	
 	background-color: #D9CCCC;
 	color: black;
+	font-weight: bold;
 
 }
