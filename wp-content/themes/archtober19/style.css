@@ -809,9 +809,9 @@ ul.archtober_menu_index li a{
 
 @media(max-width: 768px){
 	.arch_event_block img.archtober_event_icon{
-		top:1rem;
+		top:0;
 		width: 20vw;
-		right: -0.25rem;
+		right: 0.25rem;
 	}
 }
 
@@ -1036,15 +1036,15 @@ li.arch_filter{
 	padding-right: 0.5rem;
 }
 
-.mobile_reveal{
+.mobile_reveal, .sub_section.mobile_reveal{
 	display: none;
 }
 
 @media(max-width: 768px){
-	.mobile_hide{
+	.mobile_hide, .sub_section.mobile_hide{
 		display: none;
 	}
-	.mobile_reveal{
+	.mobile_reveal, .sub_section.mobile_reveal{
 		display: flex;
 	}
 
@@ -1058,6 +1058,7 @@ li.arch_filter{
 		display: inline-flex;
 		flex-wrap:wrap;
 		padding-bottom: 1rem;
+		border-bottom: none;
 	}
 
 	.index_section.arch_partners{
@@ -1065,6 +1066,7 @@ li.arch_filter{
 		display: flex;
 		border-right: none !important;
 		padding-right: 0.05rem;
+		border-bottom: 2px black solid;
 	}
 
 	
