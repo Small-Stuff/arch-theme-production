@@ -1081,7 +1081,7 @@ li.arch_filter{
 
 .index_section img.archtober_event_icon{
 	position: absolute;
-	top: -0.5rem;
+	top: 0;
 	right: 50vw;
 	width: 6vw;
 	transform: rotate(20deg);
