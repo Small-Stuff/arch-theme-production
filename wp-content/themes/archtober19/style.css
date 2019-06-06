@@ -1460,7 +1460,15 @@ footer{
 .footer_column ul li{
 	color: white;
 	background-color: transparent;
+	font-weight: bold;
 }
+
+.footer_column h1,
+.footer_column h2{
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+
 
 
 .footer_column h1 a,
@@ -1474,4 +1482,5 @@ footer{
 	text-decoration: none;	
 	background-color: #D9CCCC;
 	color: black;
+
 }
