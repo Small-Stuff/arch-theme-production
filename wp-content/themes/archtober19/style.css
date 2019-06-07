@@ -329,8 +329,9 @@ input.submit_field{
 
 /* marquee style + animation */
 .marquee_wrapper{
+	position: relative;
 	display: block;
-	width: 100%;
+	width: 100vw;
 	overflow-x: hidden;
 	height: 2rem;
 	background-color: rgba(99, 101, 105, 1);
