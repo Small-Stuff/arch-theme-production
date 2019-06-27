@@ -4,6 +4,7 @@ Site.starting_namespace = "";
 Site.target_day = 0;
 Site.event_type = [];
 Site.institutions = [];
+Site.partner_type = [];
 
 
 Site.menuInteraction = function(){
@@ -161,11 +162,6 @@ Site.pageEnter = function(upcoming_namespace){
 	             .to("body", 1, {opacity :1})
 	             .set("body", {clearProps: "opacity"});
 
-
-	// TweenMax.set("body", {opacity :0})
-	// TweenMax.set(window, {scrollTo: 0})
-	// TweenMax.to("body", 0.25, {opacity :1, onComplete: function(){
-	// TweenMax.set("body", {clearProps: "all"})}})
 	Site.botd_load(upcoming_namespace)
 	Site.menuInteraction()
 	Site.crosspage_event_filter()
@@ -174,13 +170,12 @@ Site.pageEnter = function(upcoming_namespace){
 
 /* CROSS PAGE NAVIGATION */
 Site.calendar = function(){
-	// if we are starting on the homepage
 
 	document.querySelectorAll("a.cal_day").forEach(function(cal_button){
 		cal_button.onclick = function(event){
 			var mainNameSpace = document.querySelector("main").getAttribute("data-barba-namespace");
 			console.log("mainNameSpace:", mainNameSpace)
-			if(mainNameSpace == "home"){
+			if(mainNameSpace == "home"){ // if we are starting on the homepage
 				event.preventDefault();
 				document.querySelector("#arch_menu").classList.remove("open") // exit menu
 				if(cal_button.classList.contains("day_recent")){ // if its a hidden day
@@ -197,7 +192,7 @@ Site.calendar = function(){
 				// }});
 			}else{ // cross page navigation:
 				Site.target_day = parseInt(cal_button.getAttribute("data-targetday"));
-
+				console.log(Site.target_day)
 			}
 		}
 	})
@@ -223,9 +218,7 @@ Site.ui_update = function(filter_array){
 		// update list tag
 
 		filter_array.forEach(function(filter, index){
-
 			document.querySelector("#eventtype_" + filter).classList.add("active")
-
 		})
 
 		// filter listed events
@@ -285,6 +278,8 @@ window.onload = function(){
 		Site.event_filter(Site.event_type)
 	}else if(Site.starting_namespace == "exhibitions"){
 		Site.event_filter(Site.institutions)
+	}else if(Site.starting_namespace == "partners"){
+		Site.event_filter(Site.partner_type)
 	}else if(Site.starting_namespace == "home"){
 		Site.homepageToggle();
 	}
@@ -347,6 +342,22 @@ window.onload = function(){
 			}
 		},
 		{
+			name: 'target_event',
+			sync: true,
+			to: {
+				namespace: [
+					'event'
+				]
+			},
+			beforeLeave(data){
+				Site.pageLeave();
+			},
+			afterEnter(data){
+				Site.pageEnter(data.next.namespace);
+				Site.calendar();
+			}
+		},
+		{
 			name: 'target_exhibitions',
 			sync: true,
 			to: {
@@ -360,6 +371,22 @@ window.onload = function(){
 			afterEnter(data){
 				Site.pageEnter(data.next.namespace)
 				Site.event_filter(Site.institutions)
+			}
+		},
+		{
+			name: 'target_partners',
+			sync: true,
+			to: {
+				namespace: [
+					'partners'
+				]
+			},
+			beforeLeave(data){
+				Site.pageLeave()
+			},
+			afterEnter(data){
+				Site.pageEnter(data.next.namespace)
+				Site.event_filter(Site.partner_type)
 			}
 		},
 		{

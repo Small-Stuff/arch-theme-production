@@ -3,7 +3,6 @@
 Template Name: Single Event
 */
 ?>
-
 <?php
 	$id = get_the_ID();
 	$this_post = get_post( $id );
@@ -13,6 +12,8 @@ Template Name: Single Event
 	$event_str = $as_date->format('Y-m-d');
 	$event_unix = strtotime($event_str);
 	$day_of_week = date("l", $event_unix); # for color coding
+	$external_link = get_field('event_external_link', false, false);
+	$external_link_url = get_field('event_external_link_url', false, false);
 	$content = wpautop( $this_post->post_content );
 ?>
 
@@ -25,6 +26,27 @@ Template Name: Single Event
 		<h1 class="event_page_title event_page_<?= get_terms_str_slug($id, 'event_type'); ?>"><?= $title ?></h1>
 		<h4 class="event_info"><?= (get_field('event_endtime')) ? get_field('event_time')." – ".get_field('event_endtime') : get_field('event_time') ?></h4>
 		<h4 class="event_info"><?= (get_field('location_url')) ? '<a target="_blank" href="'.get_field('location_url').'">'.get_field('location').'</a>' : get_field('location'); ?></h4>
+		<!-- EXTERNAL LINK -->
+		<?php if(get_field('event_external_link') && get_field('event_external_link_url')): ?>
+			<a class="individual_link event_link" href="<?= $external_link_url ?>"><?= $external_link ?></a>
+		<?php elseif (get_field('event_external_link')): ?>
+			<span class="individual_link event_link"><?= $external_link ?></span>
+		<?php endif; ?>
+		<!-- ORGANIZED BY -->
+		<?php if(get_field('partner')): ?>
+			<h4 class="event_info event_org"> Organized by:<br>
+			<?php foreach(get_field('partner') as $post): ?>
+				<?php setup_postdata($post); ?>
+				<?= the_title(); ?><br>
+			<?php endforeach; ?>
+			</h4>
+			<?php wp_reset_postdata(); ?>
+		<?php endif; ?>
+		<!-- ARCHITECT (OPTIONAL) -->
+		<?php if(get_field('architects')): ?>
+			<div class="event_type bod_architects"><?= wpautop(get_field('architects')) ?></div>
+		<?php endif; ?>
+
 		<?php if(get_field('featured_image')): ?>
 			<img class="event_featured_image" src="<?= get_field('featured_image') ?>">
 		<?php endif ?>

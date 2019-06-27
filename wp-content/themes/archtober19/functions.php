@@ -1,10 +1,10 @@
 <?php 
 
-/* 
-archtober 2019,
-update to archtober 2018 theme
-by lukas eigler-harding
-*/
+	/* 
+	archtober 2019,
+	update to archtober 2018 theme
+	by lukas eigler-harding
+	*/
 
 
 /* opening */

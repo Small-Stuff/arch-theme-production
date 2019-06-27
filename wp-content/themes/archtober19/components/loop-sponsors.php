@@ -1,7 +1,8 @@
 <?php 
 	# get types of sponsors
 	$sponsor_types = get_terms( array(
-		'orderby' => 'term_order',
+		'orderby' => 'name',
+    'order' => 'ASC',
 	  'taxonomy' => 'sponsor_type',
 	  'hide_empty' => true,
 		)
@@ -12,6 +13,8 @@
 		$sponsor_arguments = array(
 			'post_type' => 'sponsors',
 			'posts_per_page' => -1,
+			'orderby' => 'name',
+    	'order' => 'ASC',
 			'tax_query' => array (
 				array(
 					'taxonomy' => 'sponsor_type',

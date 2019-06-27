@@ -1,5 +1,12 @@
 <div class="archtober_calendar">
 <h1>Calendar</h1>
+<span class="weekday">S</span
+><span class="weekday">M</span
+><span class="weekday">T</span
+><span class="weekday">W</span
+><span class="weekday">T</span
+><span class="weekday">F</span
+><span class="weekday">S</span><br>
 <?php 	
 	$today = new DateTime('today');
 	$today_str = $today->format('Y-m-DD');

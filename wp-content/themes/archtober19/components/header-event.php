@@ -12,15 +12,19 @@
 	$current_day = new DateTime('today');
 	$status = '';
 	if($current_day < $the_date):
-		$status .= '<span class="day_header">Upcoming Event</span>';
+		$status .= '<span class="day_header menu_header">Upcoming Event</span>';
 	elseif ($current_day == $the_date):
-		$status .= '<span class="day_header">Today</span>';
+		$status .= '<span class="day_header menu_header">Today</span>';
 	elseif ($current_day > $the_date):
-		$status .= '<span class="day_header">Recent Event</span>';
+		$status .= '<span class="day_header menu_header">Recent Event</span>';
 	endif;
 
 ?>
-<section class="event_header menu_header index_header day_<?= $day_of_week; ?>" data-silhouetteday="<?= $day_of_month ?>">
-		<h1><?= $status ?> <?= weekday_month_day($this_event_date) ?></h1>
+<section class="event_header index_header day_<?= $day_of_week; ?>" data-silhouetteday="<?= $day_of_month ?>">
+		<h1><?= $status ?>
+		<a class="date_link cal_day" 
+			 href="<?= get_site_url().'#october_'.$day_of_month ?>"
+			 data-targetday="<?= $day_of_month ?>">
+			 <?= weekday_month_day($this_event_date) ?></a></h1>
 		<?php get_template_part('components/extra', 'icons') ?>
 </section>
