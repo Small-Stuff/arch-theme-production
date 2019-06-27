@@ -1208,6 +1208,11 @@ img.sponsor_display_Half{
 	width: 50%;
 }
 
+img.sponsor_display_half,
+img.sponsor_display_Half{
+	padding-right: 5rem;
+}
+
 a.sponsor_display_quarter, h1.sponsor_display_quarter,
 a.sponsor_display_Quarter, h1.sponsor_display_Quarter,
 img.sponsor_display_quarter, img.sponsor_display_Quarter{
@@ -1216,12 +1221,19 @@ img.sponsor_display_quarter, img.sponsor_display_Quarter{
 	width: 25%;
 }
 
+img.sponsor_display_quarter,
+img.sponsor_display_Quarter{
+	padding-right: 2.5rem;
+}
+
 .sponsor_section img, .sponsor_section a img{
 	object-fit: contain;
+	box-sizing: border-box;
 	object-position: left;
 	max-width: 100%;
 	max-height: 15rem;
 	margin-top: 0.5rem;
+
 }
 
 @media(max-width: 768px){
@@ -1241,9 +1253,12 @@ img.sponsor_display_quarter, img.sponsor_display_Quarter{
 		line-height: 1rem;
 	}
 
-	.sponsor_section img, .sponsor_section a img{
+	.sponsor_section img, .sponsor_section a img,
+	img.sponsor_display_quarter, img.sponsor_display_Quarter,
+	img.sponsor_display_half, img.sponsor_display_Half{
 		max-height: 100%;
 		max-width: 80%;
+		padding-right: 0;
 	}
 }
 
