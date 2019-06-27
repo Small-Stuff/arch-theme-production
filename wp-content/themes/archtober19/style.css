@@ -1200,14 +1200,17 @@ span.event_type{
 
 a.sponsor_display_, h1.sponsor_display_,
 a.sponsor_display_half, h1.sponsor_display_half,
-a.sponsor_display_Half, h1.sponsor_display_Half{
+a.sponsor_display_Half, h1.sponsor_display_Half,
+img.sponsor_display_half,
+img.sponsor_display_Half{
 	display: inline-block;
 	vertical-align: top;
 	width: 50%;
 }
 
 a.sponsor_display_quarter, h1.sponsor_display_quarter,
-a.sponsor_display_Quarter, h1.sponsor_display_Quarter{
+a.sponsor_display_Quarter, h1.sponsor_display_Quarter,
+img.sponsor_display_quarter, img.sponsor_display_Quarter{
 	display: inline-block;
 	vertical-align: top;
 	width: 25%;
