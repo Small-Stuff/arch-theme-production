@@ -1237,9 +1237,8 @@ img.sponsor_display_quarter, img.sponsor_display_Quarter{
 	width: 25%;
 }
 
-a.sponsor_display_ img,
-a.sponsor_display_half img,
-a.sponsor_display_Half img{
+a.sponsor_display_quarter img,
+a.sponsor_display_Quarter img{
 	width: 100%;
 	padding-right: 2.5rem;
 }
