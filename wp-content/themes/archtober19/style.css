@@ -1198,6 +1198,15 @@ span.event_type{
 	text-decoration: none;
 }
 
+.sponsor_section img, .sponsor_section a img{
+	object-fit: contain;
+	box-sizing: border-box;
+	object-position: left;
+	max-width: 100%;
+	max-height: 15rem;
+	margin-top: 0.5rem;
+}
+
 a.sponsor_display_, h1.sponsor_display_,
 a.sponsor_display_half, h1.sponsor_display_half,
 a.sponsor_display_Half, h1.sponsor_display_Half,
@@ -1206,6 +1215,13 @@ img.sponsor_display_Half{
 	display: inline-block;
 	vertical-align: top;
 	width: 50%;
+}
+
+a.sponsor_display_ img,
+a.sponsor_display_half img,
+a.sponsor_display_Half img{
+	width: 100%;
+	padding-right: 5rem;
 }
 
 img.sponsor_display_half,
@@ -1221,20 +1237,18 @@ img.sponsor_display_quarter, img.sponsor_display_Quarter{
 	width: 25%;
 }
 
+a.sponsor_display_ img,
+a.sponsor_display_half img,
+a.sponsor_display_Half img{
+	width: 100%;
+	padding-right: 2.5rem;
+}
+
 img.sponsor_display_quarter,
 img.sponsor_display_Quarter{
 	padding-right: 2.5rem;
 }
 
-.sponsor_section img, .sponsor_section a img{
-	object-fit: contain;
-	box-sizing: border-box;
-	object-position: left;
-	max-width: 100%;
-	max-height: 15rem;
-	margin-top: 0.5rem;
-
-}
 
 @media(max-width: 768px){
 	a.sponsor_display_, h1.sponsor_display_,
