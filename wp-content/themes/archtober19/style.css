@@ -138,7 +138,7 @@ h5 a{
 .day_Friday h2,
 .day_Friday.page_section h1.event_page_title,
 .day_Friday span.event_type,
-.day_Monday span.event_link { background-color: #FFDCCC; }
+.day_Friday span.event_link { background-color: #FFDCCC; }
 .day_Saturday h2,
 .day_Saturday.page_section h1.event_page_title,
 .day_Saturday span.event_type,
