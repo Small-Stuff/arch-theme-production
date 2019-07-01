@@ -1251,8 +1251,8 @@ img.sponsor_display_Quarter{
 	a.sponsor_display_, h1.sponsor_display_,
 	a.sponsor_display_half, h1.sponsor_display_half,
 	a.sponsor_display_Half, h1.sponsor_display_Half{
-		display: block;
-		width: 100%;
+		display: inline-block;
+		width: 50%;
 		font-size: 0.8rem;
 		line-height: 1rem;
 	}
@@ -1275,8 +1275,15 @@ img.sponsor_display_Quarter{
 		padding-right: 0.25rem;
 	}
 
+	.sponsor_section img, 
+	.sponsor_section a img{
+		max-width: 100%;
+		padding-right: 0.5rem;
+	}
+
 	img.sponsor_display_half, 
 	img.sponsor_display_Half{
+		
 		padding-right: 0.5rem;
 	}
 
