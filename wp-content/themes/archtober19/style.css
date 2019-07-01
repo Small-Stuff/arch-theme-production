@@ -28,7 +28,6 @@ body, html{
 	}
 }
 
-
 @media(max-width: 768px){
 	body, html{
 		font-size: 24px;
@@ -38,7 +37,6 @@ body, html{
 body{
 	overflow-x: hidden;
 }
-
 
 *{
 	box-sizing: border-box;
@@ -1266,13 +1264,22 @@ img.sponsor_display_Quarter{
 		line-height: 1rem;
 	}
 
-	.sponsor_section img, .sponsor_section a img,
-	img.sponsor_display_quarter, img.sponsor_display_Quarter,
-	img.sponsor_display_half, img.sponsor_display_Half{
+	.sponsor_section img, 
+	.sponsor_section a img,
+	img.sponsor_display_quarter, 
+	img.sponsor_display_Quarter,
+	img.sponsor_display_half, 
+	img.sponsor_display_Half{
 		max-height: 100%;
 		max-width: 80%;
-		padding-right: 0;
+		padding-right: 0.25rem;
 	}
+
+	img.sponsor_display_half, 
+	img.sponsor_display_Half{
+		padding-right: 0.5rem;
+	}
+
 }
 
 
