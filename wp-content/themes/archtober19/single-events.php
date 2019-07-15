@@ -48,7 +48,7 @@ Template Name: Single Event
 		<?php endif; ?>
 
 		<?php if(get_field('featured_image')): ?>
-			<img class="event_featured_image" src="<?= get_field('featured_image') ?>">
+			<!-- <img class="event_featured_image" src="<?= get_field('featured_image') ?>"> -->
 		<?php endif ?>
 		<?php if($this_post->post_content != ''): ?>
 			<section class="event_content"><?= $content ?></section>

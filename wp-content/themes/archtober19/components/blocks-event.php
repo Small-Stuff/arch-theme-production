@@ -7,12 +7,13 @@
 	<!-- EVENT TIME -->
 	<p><?= (get_field('event_endtime')) ? get_field('event_time')." – ".get_field('event_endtime') : get_field('event_time') ?></p>
 	<!-- EVENT LOCATION -->
-	<p class="block_event_location"><?= get_field('location'); ?></p>
+	<!-- <p class="block_event_location"><?= get_field('location'); ?></p> -->
 	<!-- ORGANIZED BY -->
 	<?php if(get_field('partner')): ?>
 		<p class="block_event_org"> Organized by:<br>
-		<?php foreach(get_field('partner') as $partner): ?>
-			<?= get_the_title( $partner->ID ); ?><br>
+		<?php $partner_amount = count(get_field('partner')); ?>
+		<?php foreach(get_field('partner') as $key=>$partner): ?>
+			<?= get_the_title( $partner->ID ); ?><?= ($key + 1 < $partner_amount) ? ";" : "" ?><br>
 		<?php endforeach; ?>
 		</p>
 	<?php endif; ?>

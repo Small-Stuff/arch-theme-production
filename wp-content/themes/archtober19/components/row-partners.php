@@ -20,13 +20,12 @@
 		<?= $subnames; ?>
 		</h3>
 	<h3 class="index_section_title section_six arch_partner mobile_hide">
-		<?= get_field('primary_address') ?>
-		<?= $subaddress; ?>
-
-	</h3>
-	<h3 class="index_section_title section_six arch_partner mobile_hide">
 		<a target="_blank" href="<?= get_field('website') ?>"><?= pretty_url(get_field('website')) ?></a>
 		<?= $subwebsites; ?>
+	</h3>
+	<h3 class="index_section_title section_six arch_partner mobile_hide">
+		<?= get_field('primary_address') ?>
+		<?= $subaddress; ?>
 	</h3>
 	<h3 class="index_section_title section_six arch_partner">
 		<a href="tel:+<?= get_field('phone_number') ?>" ><?= get_field('phone_number') ?></a>

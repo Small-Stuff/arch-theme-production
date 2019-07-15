@@ -10,21 +10,6 @@
 - need to make "pages" for each top level custom post_type
 - add building of the day event type
 
-## to do
-- [ ] output
-	- [x] homepage
-	- [x] indeces pages
-		- [x] events
-		- [x] exhibitions
-		- [x] sponsors
-		- [x] partners
-	- [x] about
-	- [x] intro statement
-	- [x] single event page
-	- [x] footer info
-	- [x] dynamic marquee
-- [x] css
-	- [x] mobile
 
 ## Schedule
 
@@ -39,12 +24,39 @@
 - [x] live content population testing
 - export site as discrete files
 
+### July 15 updates
+Overall Updates
+- //CFA: remove address from main
+- //CFA: add semicolon to divide multiple organizers
+- CFA: NOTE 'organized by’ copy may change
 
+- CFA: Need to tweak Benefactor logo position // SS recco: alter image to inset as needed (will only be 1-2 benefactors)
+- //CFA: Please confirm that these will list in alphabetical order according to file name (not date file added)
 
+- //CFA: Order should be “website, contacts, phone” for desktop
+- CFA: Consider adjusting size to be smaller for table column contents if needed (this would be across the board) / SS to review
 
-### waiting for 
-- [ ] icons
-	- [ ] kids
-	- [ ] BOTD nearby
-	- [ ] weekend get-aways
-	- [ ] library icon?
+- CFA: burger disappears occassionally on partners  mobile)
+- //CFA: Burger + typer vertical position in banner tweak
+- CFA: archtober logo slightly smaller (awkward display issue)  // SS to review and consider  
+
+- CFA: "remove name on event page” (SS to clarify this feedback?)
+- CFA: "body on mobile is a little too big" // SS to review: tighten leading (should body text get smaller overall)
+//*******CFA: Image on some events appearing on Event Page Mobile vs. Desktop (DOMINO PARK appearing on mobile = not desktop)
+- CFA: Some formatting issues in body… i.e. line breaks in para not showing up consistently (see newtown creek for example)
+_______________________
+Updates [in progress/TK]
+- resolve icons / placement/scale
+	- CFA: pencil / crayon or something else for edu… no eyes. 
+	- CFA: Icons a lil too big in list + event (can they be diminished in back of body text on pages?)
+
+LEH	questions:
+
+- is the intro loading still happening for them when they go back to the homepage from an event?
+	///// yes
+- is the menu icon still disappearing for them?
+	//// yes
+
+**SS NOTE: review body text hierarchy to see if it fits w all their needs [they are adding sample content ]**
+
+**LEH to check extra/errant “building name” field on event page back end (which doesn’t seem to effect pages or content)**
