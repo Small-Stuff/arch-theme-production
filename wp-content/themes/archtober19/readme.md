@@ -13,6 +13,9 @@
 
 ## Schedule
 
+### further edits post july 15
+- CFA: NOTE 'organized by’ copy may change
+
 ### other to-dos
 - [x] exhibition page design refinement
 - [ ] meta tags toggle + info
@@ -28,16 +31,13 @@
 Overall Updates
 - //CFA: remove address from main
 - //CFA: add semicolon to divide multiple organizers
-- CFA: NOTE 'organized by’ copy may change
-
-- CFA: Need to tweak Benefactor logo position // SS recco: alter image to inset as needed (will only be 1-2 benefactors)
+- //CFA: NOTE 'organized by’ copy may change
+- //CFA: Need to tweak Benefactor logo position // SS recco: alter image to inset as needed (will only be 1-2 benefactors)
 - //CFA: Please confirm that these will list in alphabetical order according to file name (not date file added)
-
 - //CFA: Order should be “website, contacts, phone” for desktop
-- CFA: Consider adjusting size to be smaller for table column contents if needed (this would be across the board) / SS to review
-
-- CFA: burger disappears occassionally on partners  mobile)
 - //CFA: Burger + typer vertical position in banner tweak
+- CFA: Consider adjusting size to be smaller for table column contents if needed (this would be across the board) / SS to review
+- CFA: burger disappears occassionally on partners  mobile)
 - CFA: archtober logo slightly smaller (awkward display issue)  // SS to review and consider  
 
 - CFA: "remove name on event page” (SS to clarify this feedback?)
