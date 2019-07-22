@@ -543,7 +543,7 @@ ul.archtober_menu_index li a{
 	position: absolute;
 	object-fit: contain;
 	object-position: center;
-	width:70vw;
+	width:68vw;
 	height:80%;
 	top:0;
 	bottom:0;
@@ -1341,12 +1341,23 @@ img.sponsor_display_Quarter{
 	}
 }
 
-.event_header img.archtober_event_icon{
+.event_header_icon{
+	position: fixed;
+	top: 1rem;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 1rem);
+	overflow-x: hidden;
+	overflow-y: hidden;
+	pointer-events: none;
+	z-index: -1;
+}
+
+.event_header_icon img.archtober_event_icon{
 	position: absolute;
-	z-index: 100;
 	top: 2rem;
 	right: 50%;
-	width: 20vw;
+	width: 12vw;
 	transform: rotate(20deg);
 	object-fit: contain;
 }
@@ -1361,7 +1372,7 @@ img.sponsor_display_Quarter{
 		padding-right: 0.5rem;
 	}
 
-	.event_header img.archtober_event_icon{
+	.event_header_icon img.archtober_event_icon{
 		top: 2rem;
 		right: 0.5rem;
 		width: 25vw;
@@ -1410,8 +1421,8 @@ img.sponsor_display_Quarter{
 		width: 100%;
 	}
 	.page_section p, .page_section ul li, .page_section ol li{
-		font-size: 0.8rem;
-		line-height: 1.2rem;
+		font-size: 0.7rem;
+		line-height: 1rem;
 	}
 }
 

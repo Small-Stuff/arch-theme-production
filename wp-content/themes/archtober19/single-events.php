@@ -20,6 +20,9 @@ Template Name: Single Event
 <?php get_header(); ?>
 <main data-barba="container" data-barba-namespace="event">
 <?php get_template_part('components/header', 'event') ?>
+<div class="event_header_icon">
+	<?php get_template_part('components/extra', 'icons') ?>
+</div>
 <section class="page_content">
 	<article class="page_section day_<?= $day_of_week ?>">
 		<h5 class="event_type event_type_<?= get_terms_str_slug($id, 'event_type') ?>"><a class="event_type_filter" href="<?= get_post_type_archive_link('events') ?>" data-eventtype="<?= get_terms_str_slug($id, 'event_type') ?>"><?= get_terms_str($id, 'event_type'); ?></a></h5>

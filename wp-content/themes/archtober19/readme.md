@@ -38,17 +38,17 @@ Overall Updates
 - //CFA: Burger + typer vertical position in banner tweak
 - CFA: Consider adjusting size to be smaller for table column contents if needed (this would be across the board) / SS to review
 - CFA: burger disappears occassionally on partners  mobile)
-- CFA: archtober logo slightly smaller (awkward display issue)  // SS to review and consider  
+- //CFA: archtober logo slightly smaller (awkward display issue)  // SS to review and consider  
 
 - CFA: "remove name on event page” (SS to clarify this feedback?)
-- CFA: "body on mobile is a little too big" // SS to review: tighten leading (should body text get smaller overall)
+- //CFA: "body on mobile is a little too big" // SS to review: tighten leading (should body text get smaller overall)
 //*******CFA: Image on some events appearing on Event Page Mobile vs. Desktop (DOMINO PARK appearing on mobile = not desktop)
 - CFA: Some formatting issues in body… i.e. line breaks in para not showing up consistently (see newtown creek for example)
-_______________________
-Updates [in progress/TK]
+
+#### Updates [in progress/TK]
 - resolve icons / placement/scale
 	- CFA: pencil / crayon or something else for edu… no eyes. 
-	- CFA: Icons a lil too big in list + event (can they be diminished in back of body text on pages?)
+	- //CFA: Icons a lil too big in list + event (can they be diminished in back of body text on pages?)
 
 LEH	questions:
 

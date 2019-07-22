@@ -26,5 +26,4 @@
 			 href="<?= get_site_url().'#october_'.$day_of_month ?>"
 			 data-targetday="<?= $day_of_month ?>">
 			 <?= weekday_month_day($this_event_date) ?></a></h1>
-		<?php get_template_part('components/extra', 'icons') ?>
 </section>
