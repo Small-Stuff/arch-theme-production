@@ -15,7 +15,8 @@ function archtober_scripts() {
 	wp_enqueue_script( 'TweenMax', get_template_directory_uri() . '/assets/js/TweenMax.min.js', array(), false );
 	wp_enqueue_script( 'ScrollToPlugin', get_template_directory_uri() . '/assets/js/ScrollToPlugin.min.js', array(), false );
 	wp_enqueue_script( 'barbaUmd', get_template_directory_uri() . '/assets/js/barba.umd.js', array(), true );
-	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/script.js', array('jqueryfull', 'TweenMax', 'ScrollToPlugin', 'barbaUmd'), $ver, true );
+	wp_enqueue_script( 'polyfill', 'https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver', array(), true );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/script.js', array('jqueryfull', 'TweenMax', 'ScrollToPlugin', 'barbaUmd', 'polyfill'), $ver, true );
 }
 add_action( 'wp_enqueue_scripts', 'archtober_scripts' );
 

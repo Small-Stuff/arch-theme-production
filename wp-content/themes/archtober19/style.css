@@ -947,6 +947,8 @@ a.event_link{
 	box-sizing: border-box;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
 	width: 100%;
 	z-index: 100;
 	background-color: #D9CCCC;
