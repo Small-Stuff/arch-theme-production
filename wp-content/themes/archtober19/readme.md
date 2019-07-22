@@ -18,14 +18,13 @@
 
 ### other to-dos
 - [x] exhibition page design refinement
-- [ ] meta tags toggle + info
-- [ ] js compile/polyfills... probs babel, but wanna run test... 
-- [ ] pressure test things will more content
+- [x] js compile/polyfills... probs babel, but wanna run test... 
 	- pressure test recent events section
 - [x] event type filter link on event pages
 - [x] alt heights for event types
 - [x] live content population testing
-- export site as discrete files
+- [ ] meta tags toggle + info
+- [ ] pressure test things will more content
 
 ### July 15 updates
 Overall Updates
@@ -59,4 +58,4 @@ LEH	questions:
 
 **SS NOTE: review body text hierarchy to see if it fits w all their needs [they are adding sample content ]**
 
-**LEH to check extra/errant “building name” field on event page back end (which doesn’t seem to effect pages or content)**
+- //LEH to check extra/errant “building name” field on event page back end (which doesn’t seem to effect pages or content)

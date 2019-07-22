@@ -317,6 +317,7 @@ input.submit_field{
 }
 
 .arch_message{
+	margin-top: 0.25rem;
 	font-size: 0.75rem;
 	display: none;
 }

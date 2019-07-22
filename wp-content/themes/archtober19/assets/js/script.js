@@ -33,20 +33,21 @@ Site.emailSubmission = function(){
     var data, form, message;
     e.preventDefault();
     form = $(this);
-    message = form.find('.message');
+    message = form.find('.arch_message');
     data = $(this).serializeObject();
     form.removeClass('error success');
-    message.html('');
+    message.html('Submitted');
     return $.ajax({
       url: subscribe.data('form'),
       method: this.method,
       dataType: 'json',
       data: data,
       error: function(jqXHR, textStatus, errorThrown) {
+        return message.html("Thank you for Subscribing!");
         console.log(jqXHR, textStatus, errorThrown);
         form.addClass('error');
         if (data.result) {
-          return message.html('Sorry, an error has occurred.');
+          return message.html("Error");
         }
       },
       success: function(data, textStatus, jqXHR) {
