@@ -2,12 +2,12 @@
 Theme Name: Archtober 2019
 Theme URI: https://github.com/Small-Stuff/arch-theme-production
 Author: lukas eigler harding
-Author URI: http://lukaslukas.com/
+Author URI: https://lukaslukas.com/
 Description: The 2019 for CFA Archtober
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: archtober, architecture, CFA
+Tags: archtober, architecture, CFA, NYC
 Text Domain: archtober19
 
 */
@@ -193,7 +193,7 @@ h5 a{
 
 #arch_menu_button{
 	position: absolute;
-	top: 0.55rem;
+	top: 0.5rem;
 	right: 0.5rem;
 	width: 1.5rem;
 	height: 1rem;
@@ -796,10 +796,12 @@ ul.archtober_menu_index li a{
 
 .arch_event_block .block_event_org{
 	margin-top: 0.25rem;
+	margin-bottom: 1rem;
 }
 @media(max-width: 768px){
 	.arch_event_block .block_event_org{
 		margin-top: 0.5rem;
+		margin-bottom: 0.5;
 	}
 }
 
@@ -935,6 +937,7 @@ a.event_link{
 @media(max-width: 768px){
 	.event_link{
 		font-size: 0.8rem;
+		left: 0.5rem;
 	}
 }
 
@@ -1068,6 +1071,16 @@ li.arch_filter{
 	overflow-x: hidden;
 }
 
+@media(min-width: 1000px){
+	.filter_nav h2,
+	.index_section_titles h2,
+	.index_sections h2,
+	.index_sections h3{
+		font-size: 0.5rem;
+		line-height: 0.75rem;
+	}
+}
+
 .index_section{
 	position: relative;
 	text-decoration: none;
@@ -1094,6 +1107,8 @@ li.arch_filter{
 	}
 	.mobile_reveal, .sub_section.mobile_reveal{
 		display: flex;
+		box-sizing: border-box;
+		padding-right: 0.5rem;
 	}
 
 	.index_sections{
@@ -1496,8 +1511,8 @@ img.sponsor_display_Quarter{
 .event_content p a,
 .event_content ul li a,
 .event_content ol li a{
-	color: black;
-	border-bottom: solid 2px black;
+	color: rgba(66, 40, 42, 1);
+	border-bottom: solid 2px rgba(66, 40, 42, 1);
 }
 
 .page_section .event_content h1{
@@ -1530,7 +1545,8 @@ img.sponsor_display_Quarter{
 }
 
 .page_section h4 a{
-	color: black;
+	color: rgba(66, 40, 42, 1);
+	border-bottom: solid 2px rgba(66, 40, 42, 1);
 }
 
 .page_section h4:first-of-type{
@@ -1610,6 +1626,7 @@ footer{
 
 .footer_column{
 	display: inline-block;
+	vertical-align: top;
 	width: 50%;
 	box-sizing: border-box;
 }

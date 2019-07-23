@@ -10,7 +10,7 @@ Template Name: Partners Archive
 <section class="index_section_titles index_partners">
 	<h2 class="index_section_title section_three event_title arch_partner">Partner</h2>
 	<h2 class="index_section_title section_six arch_partner mobile_hide">Website</h2>
-	<h2 class="index_section_title section_six arch_partner mobile_hide">Address</h2>
+	<h2 class="index_section_title section_three arch_partner mobile_hide">Address</h2>
 	<h2 class="index_section_title section_six arch_partner">Phone</h2>
 </section>
 <section class="index_sections">

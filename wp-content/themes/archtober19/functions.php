@@ -9,7 +9,7 @@
 
 /* opening */
 function archtober_scripts() {
-	$ver = '1.0';
+	$ver = '1.1';
 	wp_enqueue_style( 'style', get_stylesheet_uri(), null, $ver );
 	wp_enqueue_script( 'jqueryfull', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js', array(), false );
 	wp_enqueue_script( 'TweenMax', get_template_directory_uri() . '/assets/js/TweenMax.min.js', array(), false );
