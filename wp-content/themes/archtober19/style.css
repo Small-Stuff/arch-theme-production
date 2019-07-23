@@ -117,6 +117,17 @@ h5 a{
 .day_Saturday h1, .day_Saturday h1 a, .day_Saturday h3.event_date{ color: #789903; text-decoration: none;}
 .day_Sunday h1, .day_Sunday h1 a, .day_Sunday h3.event_date{ color: #9794D1; text-decoration: none;}
 
+@media(max-width: 768px){
+	/* OPTIONAL EDIT 23.07.19 */
+ .day_Monday.archtober_day h1{ background-color: #FF4438; color: #D9CCCC; margin-bottom: 0.5rem;}
+ .day_Tuesday.archtober_day h1{ background-color: #0082CA; color: #D9CCCC; margin-bottom: 0.5rem;}
+ .day_Wednesday.archtober_day h1{ background-color: #E57302; color: #D9CCCC; margin-bottom: 0.5rem;}
+ .day_Thursday.archtober_day h1{ background-color: #BF29BA; color: #D9CCCC; margin-bottom: 0.5rem;}
+ .day_Friday.archtober_day h1{ background-color: #FF5200; color: #D9CCCC; margin-bottom: 0.5rem;}
+ .day_Saturday.archtober_day h1{ background-color: #789903; color: #D9CCCC; margin-bottom: 0.5rem;}
+ .day_Sunday.archtober_day h1{ background-color: #9794D1; color: #D9CCCC; margin-bottom: 0.5rem;}
+}
+
 .day_Monday h2,
 .day_Monday.page_section h1.event_page_title,
 .day_Monday span.event_type,

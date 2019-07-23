@@ -19,6 +19,8 @@
 	$botd_list = new WP_Query($botd_arguments); # get all events by day for silhouttes
 	$today = new DateTime('today');
 	$today_str = $today->format('Y-m-d');
+	$intro_animation = (get_field('intro_animation', 'option')) ? "botd_animation" : "logo_animation";
+
 ?>
 	<section class="botd_list">
 <?php 
@@ -39,7 +41,7 @@
 	  wp_reset_postdata();
 	endif;
 	if(get_field('archtober_logo', 'option')): ?>
-	<img class="archtober_logo botd_hidden" src="<?= get_field('archtober_logo', 'option'); ?>" />
+	<img class="archtober_logo <?= $intro_animation ?> botd_hidden" src="<?= get_field('archtober_logo', 'option'); ?>" />
 	<?php endif; ?>
 
 		<div class="botd_filter"></div>

@@ -95,17 +95,7 @@ Site.up_to = function(current_day, botd_array){
 	TweenMax.set(".botd_filter", {opacity: 0.9})
 }
 
-Site.intro_load = function(current_day, botd_array){
-	document.querySelector(".archtober_logo").classList.add("botd_hyper_vis");
-	botd_array.forEach(function(this_botd, index){
-		TweenMax.to(this_botd, 1/botd_array.length, {opacity: 1, delay: index/botd_array.length, ease: Power4.easeInOut, onComplete: function(){
-				this_botd.classList.remove("botd_hidden")
-				TweenMax.set(this_botd, {clearProps: "opacity"})
-			}
-		})
-	})
-	var archtober_logo_fadein = (botd_array.length > 0) ? 1/botd_array.length : 0.25;
-
+Site.fadeInPage = function(archtober_logo_fadein){
 	TweenMax.to(".archtober_logo", archtober_logo_fadein, {opacity: 1, delay: 1, ease: Power4.easeInOut})
 	TweenMax.to(".botd_filter", 1.5, {opacity: 0.9, delay: 1.5, ease: Power4.easeInOut})
 	TweenMax.to("#open_menu", 1.5, {marginTop: 0, delay: 2, ease: Power4.easeInOut, onComplete: function(){
@@ -115,10 +105,34 @@ Site.intro_load = function(current_day, botd_array){
 	})
 }
 
+Site.intro_load_alt = function(){
+	console.log("logo animation")
+	Site.fadeInPage(0.25)
+}
+
+Site.intro_load = function(current_day, botd_array){
+	document.querySelector(".archtober_logo").classList.add("botd_hyper_vis");
+	// logo animation
+	if(document.querySelector(".archtober_logo").classList.contains("logo_animation")){
+		Site.intro_load_alt();
+		return;
+	}
+
+	// BOTD animation
+	botd_array.forEach(function(this_botd, index){
+		TweenMax.to(this_botd, 1/botd_array.length, {opacity: 1, delay: index/botd_array.length, ease: Power4.easeInOut, onComplete: function(){
+				this_botd.classList.remove("botd_hidden")
+				TweenMax.set(this_botd, {clearProps: "opacity"})
+			}
+		})
+	})
+	var archtober_logo_fadein = (botd_array.length > 0) ? 1/botd_array.length : 0.25;
+	Site.fadeInPage(archtober_logo_fadein)
+}
+
 Site.botd_load = function(pageNameSpace){
 	var botd_array = Array.prototype.slice.call(document.querySelectorAll(".botd_image"));
 	var current_day = (document.querySelector(".day_current") != null) ? parseInt(document.querySelector(".day_current").getAttribute("data-current_day")) : 31;
-	// console.log("botd_load", pageNameSpace, current_day, botd_array)
 
 	if(pageNameSpace == "home"){
 		if(Site.visited == false){
