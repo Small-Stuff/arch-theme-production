@@ -23,9 +23,21 @@
 
 ?>
 	<section class="botd_list">
+
 <?php 
 
-	if( $botd_list->have_posts() ): 
+	if(!get_field('intro_animation', 'option')): ?>
+	<img class="arch_logo_animation" src="<?= get_template_directory_uri().'/assets/images/' ?>archtober-logo-sun.svg" />
+	<img class="arch_logo_animation" src="<?= get_template_directory_uri().'/assets/images/' ?>archtober-logo-mon.svg" />
+	<img class="arch_logo_animation" src="<?= get_template_directory_uri().'/assets/images/' ?>archtober-logo-tues.svg" />
+	<img class="arch_logo_animation" src="<?= get_template_directory_uri().'/assets/images/' ?>archtober-logo-wed.svg" />
+	<img class="arch_logo_animation" src="<?= get_template_directory_uri().'/assets/images/' ?>archtober-logo-thurs.svg" />
+	<img class="arch_logo_animation" src="<?= get_template_directory_uri().'/assets/images/' ?>archtober-logo-fri.svg" />
+	<img class="arch_logo_animation" src="<?= get_template_directory_uri().'/assets/images/' ?>archtober-logo-sat.svg" />
+<?php
+	endif;
+
+	if( $botd_list->have_posts() && get_field('intro_animation', 'option') ): 
 		while( $botd_list->have_posts() ):
 			$botd_list->the_post();
 				$event_date = get_field('date', false, false);

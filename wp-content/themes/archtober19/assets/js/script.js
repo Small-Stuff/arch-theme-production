@@ -95,10 +95,12 @@ Site.up_to = function(current_day, botd_array){
 	TweenMax.set(".botd_filter", {opacity: 0.9})
 }
 
-Site.fadeInPage = function(archtober_logo_fadein){
-	TweenMax.to(".archtober_logo", archtober_logo_fadein, {opacity: 1, delay: 1, ease: Power4.easeInOut})
-	TweenMax.to(".botd_filter", 1.5, {opacity: 0.9, delay: 1.5, ease: Power4.easeInOut})
-	TweenMax.to("#open_menu", 1.5, {marginTop: 0, delay: 2, ease: Power4.easeInOut, onComplete: function(){
+Site.fadeInPage = function(archtober_logo_fadein, this_delay){
+	var next_step = this_delay + 0.5,
+			open_menu_step = next_step + 0.5;
+	TweenMax.to(".archtober_logo", archtober_logo_fadein, {opacity: 1, delay: this_delay, ease: Power4.easeInOut})
+	TweenMax.to(".botd_filter", 1.5, {opacity: 0.9, delay: next_step, ease: Power4.easeInOut})
+	TweenMax.to("#open_menu", 1.5, {marginTop: 0, delay: open_menu_step, ease: Power4.easeInOut, onComplete: function(){
 			document.querySelector("#open_menu").classList.add("visited")
 			TweenMax.set("#open_menu", {clearProps: "marginTop"})
 		}
@@ -107,7 +109,14 @@ Site.fadeInPage = function(archtober_logo_fadein){
 
 Site.intro_load_alt = function(){
 	console.log("logo animation")
-	Site.fadeInPage(0.25)
+	var arch_logos = document.querySelectorAll(".arch_logo_animation");
+	if(arch_logos !== undefined && arch_logos.length > 0){
+		arch_logos.forEach(function(this_logo, index){
+			TweenMax.to(this_logo, 0.25, {opacity: 1, delay: index*0.25 })
+		})
+	}
+	TweenMax.to(".arch_logo_animation", 0.25, {opacity: 0, delay: 1.75})
+	Site.fadeInPage(0.25, 1.75)
 }
 
 Site.intro_load = function(current_day, botd_array){
@@ -127,7 +136,7 @@ Site.intro_load = function(current_day, botd_array){
 		})
 	})
 	var archtober_logo_fadein = (botd_array.length > 0) ? 1/botd_array.length : 0.25;
-	Site.fadeInPage(archtober_logo_fadein)
+	Site.fadeInPage(archtober_logo_fadein, 1)
 }
 
 Site.botd_load = function(pageNameSpace){

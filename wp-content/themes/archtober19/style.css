@@ -551,6 +551,23 @@ ul.archtober_menu_index li a{
 	pointer-events: none;
 }
 
+.arch_logo_animation{
+	opacity: 0;
+	position: absolute;
+	object-fit: contain;
+	object-position: center;
+	width:68vw;
+	height:80%;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin-top:auto;
+	margin-bottom:auto;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 .archtober_logo{
 	position: absolute;
 	object-fit: contain;
@@ -568,6 +585,7 @@ ul.archtober_menu_index li a{
 }
 
 @media(max-width: 768px){
+	.arch_logo_animation,
 	.archtober_logo{
 		width: 90vw;
 		height: 90vh;
