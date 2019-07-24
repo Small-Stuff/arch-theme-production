@@ -1104,7 +1104,8 @@ li.arch_filter{
 	.filter_nav h2,
 	.index_section_titles h2,
 	.index_sections h2,
-	.index_sections h3{
+	.index_sections h3,
+	.index_sections span.event_type{
 		font-size: 0.5rem;
 		line-height: 0.75rem;
 	}

@@ -122,6 +122,7 @@ Site.intro_load_alt = function(){
 Site.intro_load = function(current_day, botd_array){
 	document.querySelector(".archtober_logo").classList.add("botd_hyper_vis");
 	// logo animation
+	
 	if(document.querySelector(".archtober_logo").classList.contains("logo_animation")){
 		Site.intro_load_alt();
 		return;
