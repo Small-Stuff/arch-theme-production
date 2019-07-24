@@ -948,6 +948,7 @@ a.event_link{
 	display: block;
 	bottom: 0.25rem;
 	left: 0.25rem;
+	max-width: calc(100% - 0.5rem);
 	font-size: 0.6rem;
 	color: white;
 	padding-left: 0.1rem;
@@ -967,6 +968,7 @@ a.event_link{
 	.event_link{
 		font-size: 0.8rem;
 		left: 0.5rem;
+		max-width: calc(100% - 1rem);
 	}
 }
 
