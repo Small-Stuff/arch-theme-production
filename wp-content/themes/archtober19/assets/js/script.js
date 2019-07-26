@@ -30,11 +30,31 @@ Site.emailSubmission = function(){
 	var subscribe = $('#subscribe');
 
 	$('#subscribe form').submit(function(e) {
-    var data, form, message;
+    var data, form, message, messageContents;
     e.preventDefault();
     form = $(this);
     message = form.find('.arch_message');
+    messageContents = "Thank you for Subscribing!";
     data = $(this).serializeObject();
+    console.log("data", data)
+
+    if(data.email == ""){
+    	form.addClass('error');
+    	messageContents = "Please provide a valid email address.";
+    	message.html(messageContents);
+    	return;
+    }else if(data.last_name == ""){
+    	form.addClass('error');
+    	messageContents = "Please provide a last name.";
+    	message.html(messageContents);
+    	return;
+    }else if(data.first_name == ""){
+    	form.addClass('error');
+    	messageContents = "Please provide a first name.";
+    	message.html(messageContents);
+    	return;
+    }
+
     form.removeClass('error success');
     message.html('Submitted');
     return $.ajax({
@@ -45,14 +65,14 @@ Site.emailSubmission = function(){
       error: function(jqXHR, textStatus, errorThrown) {
         console.log("subscribe a", jqXHR, textStatus, errorThrown);
         form.addClass('error');
-        return message.html("Thank you for Subscribing!");
+        return message.html(messageContents);
       },
       success: function(data, textStatus, jqXHR) {
         console.log("success, subscribe b", data, textStatus, jqXHR);
         form.addClass(data.status);
         if (data.result) {
           console.log(data.result)
-          return message.html("Thank you for Subscribing!");
+          return message.html(messageContents);
         }
       }
     });
