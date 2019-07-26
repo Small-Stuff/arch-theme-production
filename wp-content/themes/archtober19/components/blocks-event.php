@@ -22,7 +22,7 @@
 		<?= '<img src="'.get_field('featured_image').'">' ?>
 	<?php endif; ?>
 	<!-- EVENT REGISTER -->
-	<?= (get_field('event_external_link_url')) ? '<a class="event_link" target="_blank" href="'.get_field('event_external_link_url').'">'.get_field('event_external_link').'</a>' : '<span class="event_link">'.get_field('event_external_link').'</span>' ?>
+	<?= (get_field('event_external_link_url')) ? '<a class="event_link" target="_blank" rel="noopener noreferrer" href="'.get_field('event_external_link_url').'">'.get_field('event_external_link').'</a>' : '<span class="event_link">'.get_field('event_external_link').'</span>' ?>
 	<a class="block_link" href="<?= get_permalink(); ?>"></a>
 	<?php get_template_part('components/extra', 'icons') ?>
 </section>

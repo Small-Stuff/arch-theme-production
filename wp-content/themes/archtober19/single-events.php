@@ -31,7 +31,7 @@ Template Name: Single Event
 		<h4 class="event_info"><?= (get_field('location_url')) ? '<a target="_blank" href="'.get_field('location_url').'">'.get_field('location').'</a>' : get_field('location'); ?></h4>
 		<!-- EXTERNAL LINK -->
 		<?php if(get_field('event_external_link') && get_field('event_external_link_url')): ?>
-			<a class="individual_link event_link" href="<?= $external_link_url ?>"><?= $external_link ?></a>
+			<a class="individual_link event_link" rel="noopener noreferrer" target="_blank" href="<?= $external_link_url ?>"><?= $external_link ?></a>
 		<?php elseif (get_field('event_external_link')): ?>
 			<span class="individual_link event_link"><?= $external_link ?></span>
 		<?php endif; ?>

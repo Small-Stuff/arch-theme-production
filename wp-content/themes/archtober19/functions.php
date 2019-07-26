@@ -256,7 +256,7 @@ function get_terms_str( $post_id, $taxonomy ) {
 	foreach( $terms as $obj ){
 		array_push( $arr, $obj->name );
 	}
-	$str = implode( ',', $arr );
+	$str = implode( ', ', $arr );
 	return $str;
 } # return string of terms associated w post
 
@@ -266,7 +266,7 @@ function get_terms_str_slug( $post_id, $taxonomy ) {
 	foreach( $terms as $obj ){
 		array_push( $arr, $obj->slug );
 	}
-	$str = implode( ',', $arr );
+	$str = implode( ' ', $arr );
 	return $str;
 } # return string of slugified terms associated w post
 
