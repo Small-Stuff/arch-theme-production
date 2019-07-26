@@ -43,15 +43,12 @@ Site.emailSubmission = function(){
       dataType: 'json',
       data: data,
       error: function(jqXHR, textStatus, errorThrown) {
-        return message.html("Thank you for Subscribing!");
-        console.log(jqXHR, textStatus, errorThrown);
+        console.log("subscribe a", jqXHR, textStatus, errorThrown);
         form.addClass('error');
-        if (data.result) {
-          return message.html("Error");
-        }
+        return message.html("Thank you for Subscribing!");
       },
       success: function(data, textStatus, jqXHR) {
-        console.log("success", data, textStatus, jqXHR);
+        console.log("success, subscribe b", data, textStatus, jqXHR);
         form.addClass(data.status);
         if (data.result) {
           console.log(data.result)
