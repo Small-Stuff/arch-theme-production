@@ -36,7 +36,7 @@ Site.emailSubmission = function(){
     message = form.find('.arch_message');
     messageContents = "Thank you for Subscribing!";
     data = $(this).serializeObject();
-    console.log("data", data)
+    // console.log("data", data)
 
     if(data.email == ""){
     	form.addClass('error');
