@@ -514,7 +514,7 @@ span.weekday{
 .archtober_menu_index_wrapper{
 	display: inline-block;
 	width: 66vw;
-	padding-left: 33vw;
+	padding-left: 34vw;
 	vertical-align: top;
 }
 
@@ -1474,6 +1474,10 @@ img.sponsor_display_Quarter{
 	margin-top: 1rem;
 }
 
+.page_section h5.event_type{
+	margin-top: 0;
+}
+
 .page_section p, .page_section ul, .page_section ol{
 	margin-bottom: 0.5rem;
 }
@@ -1671,12 +1675,17 @@ footer{
 .footer_column{
 	display: inline-block;
 	vertical-align: top;
-	width: 50%;
+	width: 67%;
+	padding-right: 0.5rem;
 	box-sizing: border-box;
 }
 
+.footer_column:nth-of-type(2){
+	width: 33%;
+}
+
 @media(max-width: 768px){
-	.footer_column{
+	.footer_column, .footer_column:nth-of-type(2){
 		display: block;
 		width: 100%;
 		margin-bottom: 2rem;
