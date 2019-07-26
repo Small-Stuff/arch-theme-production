@@ -1466,11 +1466,23 @@ img.sponsor_display_Quarter{
 	font-weight: bold;
 }
 
+.page_section h1,
+.page_section h2,
+.page_section h3,
+.page_section h4,
+.page_section h5{
+	margin-top: 1rem;
+}
+
+.page_section p, .page_section ul, .page_section ol{
+	margin-bottom: 0.5rem;
+}
+
 @media(max-width: 768px){
 	.page_section img{
 		width: 100%;
 	}
-	.page_section p, .page_section ul li, .page_section ol li{
+	.page_section p, .page_section ul li, .page_section ol li, .page_section p a, .page_section p span a, .page_section li a{
 		font-size: 0.7rem;
 		line-height: 1rem;
 	}
