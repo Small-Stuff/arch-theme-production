@@ -1,7 +1,7 @@
 <?php 
 	# get types of sponsors
 	$sponsor_types = get_terms( array(
-		'orderby' => 'name',
+		'orderby' => 'slug',
     'order' => 'ASC',
 	  'taxonomy' => 'sponsor_type',
 	  'hide_empty' => true,
