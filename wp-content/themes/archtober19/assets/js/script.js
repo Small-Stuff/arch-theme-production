@@ -63,16 +63,16 @@ Site.emailSubmission = function(){
       dataType: 'json',
       data: data,
       error: function(jqXHR, textStatus, errorThrown) {
-        console.log("subscribe a", jqXHR, textStatus, errorThrown);
+        console.log("subscribe failure", jqXHR, textStatus, errorThrown);
         form.addClass('error');
         return message.html(messageContents);
       },
       success: function(data, textStatus, jqXHR) {
-        console.log("success, subscribe b", data, textStatus, jqXHR);
+        console.log("success", data, "\n", textStatus,"\n", jqXHR);
         form.addClass(data.status);
         if (data.result) {
           console.log(data.result)
-          return message.html(messageContents);
+          return message.html(data.result);
         }
       }
     });
@@ -118,8 +118,11 @@ Site.fadeInPage = function(archtober_logo_fadein, this_delay){
 	TweenMax.to(".archtober_logo", archtober_logo_fadein, {opacity: 1, delay: this_delay, ease: Power4.easeInOut})
 	TweenMax.to(".botd_filter", 1.5, {opacity: 0.9, delay: next_step, ease: Power4.easeInOut})
 	TweenMax.to("#open_menu", 1.5, {marginTop: 0, delay: open_menu_step, ease: Power4.easeInOut, onComplete: function(){
-			document.querySelector("#open_menu").classList.add("visited")
+			if(document.querySelector("#open_menu") !== null){
+				document.querySelector("#open_menu").classList.add("visited")
+			}
 			TweenMax.set("#open_menu", {clearProps: "marginTop"})
+			
 		}
 	})
 }
