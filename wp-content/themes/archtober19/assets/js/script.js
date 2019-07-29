@@ -72,6 +72,7 @@ Site.emailSubmission = function(){
         form.addClass(data.status);
         if (data.result) {
           console.log(data.result)
+          form.addClass('success');
           return message.html(data.result);
         }
       }

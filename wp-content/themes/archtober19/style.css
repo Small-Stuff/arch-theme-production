@@ -333,7 +333,8 @@ input.submit_field{
 	display: none;
 }
 
-.error .arch_message{
+.error .arch_message, 
+.success .arch_message{
 	display: block;
 }
 
