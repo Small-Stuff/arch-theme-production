@@ -515,7 +515,7 @@ span.weekday{
 .archtober_menu_index_wrapper{
 	display: inline-block;
 	width: 66vw;
-	padding-left: 34vw;
+	padding-left: 33.5vw;
 	vertical-align: top;
 }
 
@@ -1310,7 +1310,7 @@ img.sponsor_display_Quarter{
 
 	a.sponsor_display_quarter, h1.sponsor_display_quarter,
 	a.sponsor_display_Quarter, h1.sponsor_display_Quarter{
-		width: 50%;
+		width: 25%;
 		font-size: 0.8rem;
 		line-height: 1rem;
 	}

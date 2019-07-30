@@ -211,6 +211,10 @@ Site.pageEnter = function(upcoming_namespace){
 	Site.menuInteraction()
 	Site.crosspage_event_filter()
 
+	if(upcoming_namespace !== "home"){
+		Site.target_day = 0;
+	}
+
 }
 
 /* CROSS PAGE NAVIGATION */
@@ -241,6 +245,16 @@ Site.calendar = function(){
 			}
 		}
 	})
+}
+
+
+Site.setTargetDay = function(){
+	// needs to clear unless its going to homepage
+	console.log("Site.target_day", Site.target_day)
+	if(document.querySelector(".date_link")){
+		Site.target_day = document.querySelector(".date_link").getAttribute("data-targetday");
+		console.log(Site.target_day)
+	}
 }
 
 Site.crosspage_event_filter = function(){
@@ -340,7 +354,6 @@ window.onload = function(){
 				]
 			},
 			beforeLeave(){
-				// console.log("target_day, leaving")
 				Site.pageLeave()
 			},
 			afterEnter(data){
@@ -400,6 +413,7 @@ window.onload = function(){
 			afterEnter(data){
 				Site.pageEnter(data.next.namespace);
 				Site.calendar();
+				Site.setTargetDay();
 			}
 		},
 		{
