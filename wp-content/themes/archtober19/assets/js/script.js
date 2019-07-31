@@ -223,7 +223,7 @@ Site.calendar = function(){
 	document.querySelectorAll("a.cal_day").forEach(function(cal_button){
 		cal_button.onclick = function(event){
 			var mainNameSpace = document.querySelector("main").getAttribute("data-barba-namespace");
-			console.log("mainNameSpace:", mainNameSpace)
+			// console.log("mainNameSpace:", mainNameSpace)
 			if(mainNameSpace == "home"){ // if we are starting on the homepage
 				event.preventDefault();
 				document.querySelector("#arch_menu").classList.remove("open") // exit menu
@@ -241,7 +241,7 @@ Site.calendar = function(){
 				// }});
 			}else{ // cross page navigation:
 				Site.target_day = parseInt(cal_button.getAttribute("data-targetday"));
-				console.log(Site.target_day)
+				// console.log(Site.target_day)
 			}
 		}
 	})
@@ -250,10 +250,10 @@ Site.calendar = function(){
 
 Site.setTargetDay = function(){
 	// needs to clear unless its going to homepage
-	console.log("Site.target_day", Site.target_day)
+	// console.log("Site.target_day", Site.target_day)
 	if(document.querySelector(".date_link")){
 		Site.target_day = document.querySelector(".date_link").getAttribute("data-targetday");
-		console.log(Site.target_day)
+		// console.log(Site.target_day)
 	}
 }
 
