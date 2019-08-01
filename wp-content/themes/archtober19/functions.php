@@ -268,7 +268,7 @@ function get_terms_str_slug( $post_id, $taxonomy ) {
 	}
 	$str = implode( ' ', $arr );
 	return $str;
-} # return string of slugified terms associated w post
+} # return string of all slugified terms associated w post
 
 function get_terms_array_slug( $post_id, $taxonomy ) {
 	$terms = wp_get_post_terms( $post_id, $taxonomy );

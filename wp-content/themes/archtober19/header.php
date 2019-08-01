@@ -2,6 +2,16 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25907718-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-25907718-1');
+	</script>
+
 	<title><?php bloginfo( 'name' ); ?></title>
 	<?php wp_head(); ?>
 	<?php get_template_part('components/head', 'meta'); ?>

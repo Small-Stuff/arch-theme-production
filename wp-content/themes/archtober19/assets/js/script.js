@@ -196,6 +196,7 @@ Site.botd_load = function(pageNameSpace){
 Site.pageLeave = function(){
 	// generic to-do for pages leaving
 	document.querySelector("#arch_menu").classList.remove("open")
+	document.querySelector("#arch_menu").scrollTop = 0;
 	TweenMax.set('body', {opacity :0})
 	// TweenMax.set(window, {scrollTo: 0})
 }

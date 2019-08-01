@@ -14,4 +14,12 @@
 - CFA: NOTE 'organized by’ copy may change
 
 ### other to-dos
-- [ ] meta tags toggle + info
+- [x] meta tags toggle + info
+
+### post launch
+- [ ] BOD featured image
+- [ ] BOD show architect instead of featured
+- [ ] Menu Bug still exists
+- [ ] archtober logo
+
+
