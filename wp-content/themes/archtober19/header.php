@@ -9,7 +9,7 @@
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 
-	  gtag('config', 'UA-25907718-1');
+	  gtag('config', 'UA-25907718-2');
 	</script>
 
 	<title><?php bloginfo( 'name' ); ?></title>
