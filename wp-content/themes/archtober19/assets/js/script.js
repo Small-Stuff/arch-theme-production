@@ -268,15 +268,15 @@ Site.crosspage_event_filter = function(){
 	})
 }
 
-Site.ui_update = function(filter_array){
-	if(filter_array.length == 0){
+Site.ui_update = function(filter_array){ 
+	if(filter_array.length == 0){ // if no filters
 		document.querySelector("ul.arch_filter_list").classList.remove("active")
 		document.querySelector(".index_sections").classList.remove("active")
 	}else{
+		Site.update_url(filter_array); // update url to reflect filter query
 		document.querySelector("ul.arch_filter_list").classList.add("active")
 		document.querySelector(".index_sections").classList.add("active")
 		// update list tag
-
 		filter_array.forEach(function(filter, index){
 			document.querySelector("#eventtype_" + filter).classList.add("active")
 		})
@@ -300,20 +300,47 @@ Site.ui_update = function(filter_array){
 	}
 }
 
+Site.update_url = function(filter_array){
+	// get url
+	var urlParams = new URLSearchParams(window.location.search);
+	urlParams.delete('filter'); // reset filter
+	if(filter_array.length > 0){
+		filter_array.forEach(function(filter_param){
+			urlParams.append('filter', filter_param) // update filter
+		})
+	}
+	window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`);
+}
+
+Site.all_filters = function(filter_array){
+	var new_filter_array = (filter_array) ? filter_array : [];
+	var urlParams = new URLSearchParams(window.location.search);
+	var filterParams = urlParams.getAll('filter');
+
+	if(filterParams.length > 0){
+		filterParams.forEach(function(filterParam){
+			if(filterParam !== '' && filterParam !== undefined && filterParam !== false && new_filter_array.includes(filterParam) === false){
+				new_filter_array.push(filterParam);
+			}
+		})
+	}
+	return new_filter_array;
+}
+
 Site.event_filter = function(filter_array){
-	Site.ui_update(filter_array);
+	Site.ui_update(Site.all_filters(filter_array));
 	// if has selected filter(s): show
 	document.querySelectorAll("li.arch_filter").forEach(function(this_event_filter){
 		this_event_filter.onclick = function(event){
 			var this_slug = this_event_filter.getAttribute("data-eventtype");
 			if(filter_array.includes(this_slug)){
 				// already has this filter on so i need to remove it via splice
-				this_event_filter.classList.remove("active")
+				this_event_filter.classList.remove("active");
 				filter_array.splice(filter_array.indexOf(this_slug), 1);
 			}else{
 				// enact filter
 				filter_array.push(this_slug);
-				this_event_filter.classList.add("active")
+				this_event_filter.classList.add("active");
 			}
 			// update overall status
 			Site.ui_update(filter_array);
@@ -328,7 +355,6 @@ window.onload = function(){
 	Site.menuInteraction();
 	Site.emailSubmission();
 	Site.calendar();
-	// possibly create open cal and menu cal functions?
 	Site.crosspage_event_filter();
 	Site.botd_load(Site.starting_namespace)
 	Site.visited = true;
