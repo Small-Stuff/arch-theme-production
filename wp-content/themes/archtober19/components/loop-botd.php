@@ -45,7 +45,7 @@
 				$day_of_month = $as_date->format('j');
 				$event_str = $as_date->format('Y-m-d');
 				if(get_field('silhouette')): ?>
-					<img class="botd_image botd_hidden" style="transform:translate(<?= get_field('silhouette_horizontal_position').'vw, '.get_field('silhouette_vertical_position').'vh' ?>);" src="<?= get_field('silhouette') ?>" data-silhouetteday="<?= $day_of_month ?>">
+					<img class="botd_image botd_hidden" style="transform:translate(<?= get_field('silhouette_horizontal_position').'vw, '.get_field('silhouette_vertical_position').'vh' ?>) scale(<?= get_field('silhouette_scale') ?>);" src="<?= get_field('silhouette') ?>" data-silhouetteday="<?= $day_of_month ?>">
 				<?php
 				endif;
 		endwhile; ?>
