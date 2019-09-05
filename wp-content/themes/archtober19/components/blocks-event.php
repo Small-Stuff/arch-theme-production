@@ -31,7 +31,8 @@
 	<?php 
 		if(strpos($terms, 'building-of-the-day') !== false && get_field('featured_image')):
 	?>
-		<?= '<img src="'.get_field('featured_image').'">' ?>
+		<?= '<img src="'.get_field('featured_image')['sizes']['medium_large'].'">' ?>
+		
 	<?php else: ?>
 
 	<?php endif; ?>
