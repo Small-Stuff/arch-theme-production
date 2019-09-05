@@ -318,5 +318,6 @@ function get_terms_height( $post_id, $taxonomy ) {
 	return $str;
 } # return string of icon urls associated w post
 
-add_image_size( 'custom', 800, 533, true );
+add_image_size( 'custom', 1100, 1000 );
+
 add_filter( 'show_admin_bar', '__return_false' ); # when logged in
