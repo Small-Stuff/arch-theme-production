@@ -403,6 +403,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 							}})
 						}
 					})
+					Site.botd_load(data.next.namespace);
 				}else{
 					Site.pageEnter(data.next.namespace);
 				}
