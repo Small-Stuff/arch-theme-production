@@ -150,14 +150,14 @@ Site.intro_load = function(current_day, botd_array){
 
 	// BOTD animation
 	botd_array.forEach(function(this_botd, index){
-		TweenMax.to(this_botd, 1/botd_array.length, {opacity: 1, delay: index/botd_array.length, ease: Power4.easeInOut, onComplete: function(){
+		TweenMax.to(this_botd, 1/(botd_array.length/2), {opacity: 1, delay: index/(botd_array.length/2), ease: Power4.easeInOut, onComplete: function(){
 				this_botd.classList.remove("botd_hidden")
 				TweenMax.set(this_botd, {clearProps: "opacity"})
 			}
 		})
 	})
-	var archtober_logo_fadein = (botd_array.length > 0) ? 1/botd_array.length : 0.25;
-	Site.fadeInPage(archtober_logo_fadein, 1)
+	var archtober_logo_fadein = (botd_array.length > 0) ? 1/(botd_array.length/2) : 0.25;
+	Site.fadeInPage(archtober_logo_fadein, 2)
 }
 
 Site.botd_load = function(pageNameSpace){
@@ -348,7 +348,7 @@ Site.event_filter = function(filter_array){
 	})
 }
 
-window.onload = function(){
+document.addEventListener('DOMContentLoaded', function(event) {
 	console.log("Archtober 2019  👀\nSmall Stuff & Lukas Eigler-Harding")
 	// load ui
 	Site.starting_namespace = document.querySelector("main").getAttribute("data-barba-namespace");
@@ -487,4 +487,4 @@ window.onload = function(){
 			}
 		}]
 	})
-}
+})
