@@ -8,7 +8,6 @@
 	<p><?= (get_field('event_endtime')) ? get_field('event_time')." – ".get_field('event_endtime') : get_field('event_time') ?></p>
 	<!-- EVENT LOCATION -->
 	<!-- <p class="block_event_location"><?= get_field('location'); ?></p> -->
-	
 	<?php 
 		$terms = get_terms_str_slug($id, 'event_type');
 		if(strpos($terms, 'building-of-the-day') !== false): 
@@ -30,11 +29,7 @@
 	<!-- EVENT BOD IMAGE FEATURE -->
 	<?php 
 		if(strpos($terms, 'building-of-the-day') !== false && get_field('featured_image')):
-	?>
-		<?= '<img src="'.get_field('featured_image')['sizes']['medium_large'].'">' ?>
-		
-	<?php else: ?>
-
+	?><?= '<img src="'.get_field('featured_image')['sizes']['medium_large'].'">' ?>
 	<?php endif; ?>
 	<!-- EVENT REGISTER -->
 	<?= (get_field('event_external_link_url')) ? '<a class="event_link" target="_blank" rel="noopener noreferrer" href="'.get_field('event_external_link_url').'">'.get_field('event_external_link').'</a>' : '<span class="event_link">'.get_field('event_external_link').'</span>' ?>

@@ -20,5 +20,5 @@
 			<?= get_terms_str($id, 'institution'); ?>
 		<?php endif; ?>		
 	</h3>
-	<h3 class="index_section_title event_date section_three event_title index_mobile_small"><?= $start_day." – ".$end_day ?></h3>
+	<h3 class="index_section_title event_date section_three event_title index_mobile_small"><?= $start_day."–".$end_day ?></h3>
 </a>

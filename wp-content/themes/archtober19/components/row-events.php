@@ -23,8 +23,10 @@
 		<h3 class="index_section_title section_six index_mobile_small">
 			<?= get_field('location'); ?>
 		</h3>
-		<h3 class="index_section_title section_six index_mobile_small">
-			<?= (get_field('event_endtime')) ? get_field('event_time')." – ".get_field('event_endtime') : get_field('event_time') ?>
+		<h3 class="index_section_title section_six index_mobile_small event_time">
+			<?php $event_time = str_replace(':00', '', (get_field('event_endtime')) ? str_replace(['am', 'pm'], '', get_field('event_time'))."–".get_field('event_endtime') : get_field('event_time'));   ?>
+
+			<?= $event_time ?>
 		</h3>
 		<h3 class="index_section_title section_six mobile_hide">
 			<?php foreach (get_field('partner') as $partner): ?>
