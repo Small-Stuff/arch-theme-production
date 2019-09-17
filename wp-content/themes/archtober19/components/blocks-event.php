@@ -5,7 +5,7 @@
 	<!-- EVENT NAME -->
 	<h2><a href="<?= get_permalink(); ?>"><?= get_the_title(); ?></a></h2>
 	<!-- EVENT TIME -->
-	<p><?= (get_field('event_endtime')) ? get_field('event_time')." – ".get_field('event_endtime') : get_field('event_time') ?></p>
+	<p style="text-transform: uppercase;"><?php $event_time = str_replace(':00', '', (get_field('event_endtime')) ? str_replace(['am', 'pm'], '', get_field('event_time'))."–".get_field('event_endtime') : get_field('event_time'));   ?><?= $event_time ?></p>
 	<!-- EVENT LOCATION -->
 	<!-- <p class="block_event_location"><?= get_field('location'); ?></p> -->
 	<?php 
