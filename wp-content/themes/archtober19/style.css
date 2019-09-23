@@ -740,6 +740,8 @@ ul.archtober_menu_index li a{
 
 @media (max-width: 768px){
 	#recent_events .section_title{
+		padding-top: 1vh;
+		padding-bottom: 2rem;
 		background-color: #D9CCCC;
 		margin-bottom: calc(-1.1rem - 1vh);
 	}

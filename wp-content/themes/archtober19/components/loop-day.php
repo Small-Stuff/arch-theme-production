@@ -1,16 +1,20 @@
 <?php 
+	
+	date_default_timezone_set('America/New_York');
 
 	$yesterday = new DateTime('yesterday');
 	$yesterday_str = $yesterday->format('Y-m-DD');
 	$today = new DateTime('today');
 	$today_str = $today->format('Y-m-DD');
+
 	$day_int = 1;
 	$recent_events = false;
 	$upcoming_events = false;
 
+
 	#override
-	#$yesterday_str = '2019-10-02';
-	#$today_str = '2019-10-03';
+	$yesterday_str = '2019-10-02';
+	$today_str = '2019-10-03';
 	# echo '<br>'.$yesterday_str.' '.$today_str;
 
 	while( $day_int <= 31):
