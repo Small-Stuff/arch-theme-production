@@ -13,8 +13,8 @@
 
 
 	#override
-	$yesterday_str = '2019-10-02';
-	$today_str = '2019-10-03';
+	# $yesterday_str = '2019-10-02';
+	# $today_str = '2019-10-03';
 	# echo '<br>'.$yesterday_str.' '.$today_str;
 
 	while( $day_int <= 31):
