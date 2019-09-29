@@ -23,7 +23,7 @@
 <section class="event_header index_header day_<?= $day_of_week; ?>" data-silhouetteday="<?= $day_of_month ?>">
 		<h1><?= $status ?>
 		<a class="date_link cal_day" 
-			 href="<?= get_site_url().'#october_'.$day_of_month ?>"
+			 href="<?= get_site_url().'/#october_'.$day_of_month ?>"
 			 data-targetday="<?= $day_of_month ?>">
 			 <?= weekday_month_day($this_event_date) ?></a></h1>
 </section>
