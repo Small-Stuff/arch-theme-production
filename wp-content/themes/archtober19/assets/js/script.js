@@ -228,7 +228,7 @@ Site.calendar = function(){
 			if(mainNameSpace == "home"){ // if we are starting on the homepage
 				event.preventDefault();
 				document.querySelector("#arch_menu").classList.remove("open") // exit menu
-				if(cal_button.classList.contains("day_recent")){ // if its a hidden day
+				if(cal_button.classList.contains("day_recent") && document.querySelector("#recent_events") !== null){ // if its a hidden day
 					document.querySelector("#recent_events").classList.add("open");
 				}else{
 					if(document.querySelector("#recent_events") != null){
