@@ -11,6 +11,8 @@
 	$recent_events = false;
 	$upcoming_events = false;
 
+	$yesterday_sequence = $yesterday->format('Y-m-d');
+	$today_sequence = $today->format('Y-m-d');
 
 	#override
 	# $yesterday_str = '2019-10-02';
@@ -22,25 +24,27 @@
 		$date_unix = strtotime($date_str);
 		$day_of_week = date("l", $date_unix);
 
+		$date_sequence = date('Y-m-d', $date_unix);
+		// echo $date_sequence.$yesterday_sequence;
 
 		# recent events section
-		if($date_str <= $yesterday_str && $recent_events == false): ?>
+		if($date_sequence <= $yesterday_sequence && $recent_events == false): ?>
 			<section class="archtober_event_section <?= ($today_str >= '2019-11-01') ? 'archtober_over' : '' ?>" id="recent_events">
 				<button class="section_title">Past Events</button>
 			<?php $recent_events = true;
 		endif;
 
 		# current events section
-		if($date_str == $today_str && $recent_events == true): ?>
+		if($date_sequence == $today_sequence && $recent_events == true): ?>
 			</section><section class="archtober_event_section" id="todays_events">
 			<h1 class="section_title">Today&rsquo;s Events</h1>
-		<?php elseif ($date_str == $today_str && $recent_events == false): ?>
+		<?php elseif ($date_sequence == $today_sequence && $recent_events == false): ?>
 			<section class="archtober_event_section" id="todays_events">
 			<h1 class="section_title">Today&rsquo;s Events</h1>
 		<?php endif;
 
 		# upcoming events section
-		if($date_str > $today_str && $upcoming_events == false): ?>
+		if($date_sequence > $today_sequence && $upcoming_events == false): ?>
 			<section class="archtober_event_section" id="upcoming_events">
 			<h1 class="section_title">Upcoming Events</h1>
 			<?php $upcoming_events = true;
@@ -83,7 +87,7 @@
 		</article>
 		<?php
 		
-		if($date_str == $today_str):
+		if($date_sequence == $today_sequence):
 			echo '</section>';
 		endif;
 

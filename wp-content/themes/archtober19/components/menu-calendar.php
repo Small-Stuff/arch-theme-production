@@ -8,21 +8,35 @@
 ><span class="weekday">F</span
 ><span class="weekday">S</span><br>
 <?php 	
+	date_default_timezone_set('America/New_York');
+	$yesterday = new DateTime('yesterday');
 	$today = new DateTime('today');
-	$today_str = $today->format('Y-m-DD');
+	$today_str = $today->format('Y-m-d');
+
+	$today_unix = strtotime($today_str);
+	$today_sequence = date('Y-m-d', $today_unix);
+
+
+
 
 	# override
 	#$today_str = '2019-10-03';
 
 	$day = 1;
 	while ( $day <= 31):
-		$day_str = ($day < 10) ? '2019-10-0'.$day : '2019-10-'.$day;
+		date_default_timezone_set('America/New_York');
+		$date_str = ($day < 10) ? '2019-10-0'.$day : '2019-10-'.$day;
+		$date_unix = strtotime($date_str);
+		$day_of_week = date("l", $date_unix);
 
-		if($day_str < $today_str):
+		$date_sequence = date('Y-m-d', $date_unix);
+
+
+		if($date_sequence < $today_sequence):
 			echo '<a href="'.get_site_url().'/#october_'.$day.'" class="cal_day day_recent" id="archtober_'.$day.'" data-targetday="'.$day.'">'.$day.'</a>';
-		elseif ($day_str == $today_str):
+		elseif ($date_sequence == $today_sequence):
 			echo '<a href="'.get_site_url().'/#october_'.$day.'" class="cal_day day_current" id="archtober_'.$day.'" data-targetday="'.$day.'" data-current_day="'.$day.'">'.$day.'</a>';
-		elseif ($day_str > $today_str):
+		elseif ($date_sequence > $today_sequence):
 			echo '<a href="'.get_site_url().'/#october_'.$day.'" class="cal_day day_upcoming" id="archtober_'.$day.'" data-targetday="'.$day.'">'.$day.'</a>';
 		endif;
 		$day++;
