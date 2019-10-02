@@ -165,7 +165,7 @@ Site.intro_load = function(current_day, botd_array){
 				}
 			})
 		}else{
-			this_botd.add("botd_hidden");
+			this_botd.classList.add("botd_hidden");
 		}
 
 
