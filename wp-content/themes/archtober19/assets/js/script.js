@@ -150,11 +150,26 @@ Site.intro_load = function(current_day, botd_array){
 
 	// BOTD animation
 	botd_array.forEach(function(this_botd, index){
-		TweenMax.to(this_botd, 1/(botd_array.length/2), {opacity: 1, delay: index/(botd_array.length/2), ease: Power4.easeInOut, onComplete: function(){
-				this_botd.classList.remove("botd_hidden")
-				TweenMax.set(this_botd, {clearProps: "opacity"})
-			}
-		})
+		
+		// var this_botd_day = parseInt(this_botd.getAttribute("data-silhouetteday"));
+		// if(this_botd_day <= current_day){
+		// 	this_botd.classList.remove("botd_hidden")
+		// }else{
+		// 	this_botd.classList.add("botd_hidden")
+		// }
+
+		if(this_botd.getAttribute("data-silhouetteday") <= current_day){
+			TweenMax.to(this_botd, 1/(botd_array.length/2), {opacity: 1, delay: index/(botd_array.length/2), ease: Power4.easeInOut, onComplete: function(){
+					this_botd.classList.remove("botd_hidden")
+					TweenMax.set(this_botd, {clearProps: "opacity"})
+				}
+			})
+		}else{
+			this_botd.add("botd_hidden");
+		}
+
+
+		
 	})
 	var archtober_logo_fadein = (botd_array.length > 0) ? 1/(botd_array.length/2) : 0.25;
 	Site.fadeInPage(archtober_logo_fadein, 2)

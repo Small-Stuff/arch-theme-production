@@ -19,6 +19,10 @@
 	$botd_list = new WP_Query($botd_arguments); # get all events by day for silhouttes
 	$today = new DateTime('today');
 	$today_str = $today->format('Y-m-d');
+
+	$today_unix = strtotime($today_str);
+	$today_sequence = date('Y-m-d', $today_unix);
+	
 	$intro_animation = (get_field('intro_animation', 'option')) ? "botd_animation" : "logo_animation";
 
 ?>
