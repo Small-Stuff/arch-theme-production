@@ -1725,7 +1725,6 @@ footer{
 	background-color: rgba(99, 101, 105, 1);
 	margin-top: 5rem;
 	padding-top: 2.5rem;
-	padding-bottom: 5rem;
 }
 
 .footer_column{
@@ -1786,10 +1785,22 @@ footer{
 .footer_column h5 a,
 .footer_column h6 a,
 .footer_column p a,
-.footer_column ul li a{
+.footer_column ul li a,
+.footer_credits a{
 	text-decoration: none;	
 	background-color: #D9CCCC;
 	color: black;
 	font-weight: bold;
 
+}
+
+.footer_credits{
+	padding-top: 5rem;
+	padding-bottom: 0.5rem;
+	box-sizing: border-box;
+
+	font-size: 0.5rem;
+	color: white;
+	text-align: left;
+	width: 100%;	
 }
