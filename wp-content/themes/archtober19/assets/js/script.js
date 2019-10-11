@@ -29,7 +29,14 @@ Site.emailSubmission = function(){
 	// borrowed from 2018 theme
 	var subscribe = $('#subscribe');
 
+	var submitClicked = false;
+
 	$('#subscribe form').submit(function(e) {
+
+		if(submitClicked === true){ return; }
+
+		submitClicked = true;
+
     var data, form, message, messageContents;
     e.preventDefault();
     form = $(this);
@@ -69,6 +76,7 @@ Site.emailSubmission = function(){
       },
       success: function(data, textStatus, jqXHR) {
         console.log("success", data, "\n", textStatus,"\n", jqXHR);
+        submitClicked = false;
         form.addClass(data.status);
         if (data.result) {
           console.log(data.result)
